@@ -54,6 +54,15 @@ Se debera incluir Authorization header con jwt creado con el usuario en el metod
     { "error": "Debe iniciar Sesion - TOKEN INVALIDO" }
     ```
 
+#### Error 404 - Not Found
+
+- **Causa:** Empleado no encontrado.
+  - **Contenido:**
+    `json
+    { "error": "Empleado no encontrado" }
+    `
+    ``
+
 #### Error 500 - Internal Server Error
 
 - **Causa:** Error al obtener el empleado.
