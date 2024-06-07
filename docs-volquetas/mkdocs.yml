@@ -1,0 +1,29 @@
+site_name: Documentacion Volquetas
+site_description: A simple example of MkDocs project with folders and subdirectories
+site_author: Gianluca Cavajani
+
+theme:
+  name: material
+  features:
+    - navigation.top
+    - navigation.footer
+
+  palette:
+    - scheme: default
+      primary: black
+      toggle:
+        icon: material/brightness-7
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - admonition
+
+plugins:
+  - search
+  - awesome-pages
