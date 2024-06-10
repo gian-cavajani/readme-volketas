@@ -1,47 +1,50 @@
 ```http
-POST /api/usuarios/confirmar
+GET /api/usuarios/id
 ```
 
 #### Parámetros y Headers de la Solicitud
 
-La solicitud debe ser de tipo JSON y debe incluir los siguientes campos en el body:
+URL:
 
-- `email` (string): El email del usuario.
+`usuarioId` (integer, required): El ID del usuario.
 
 Se debera incluir Authorization header con jwt creado con un usuario de tipo **Admin** en el metodo `POST /usuarios/login`
-
-#### Ejemplo de Solicitud
-
-```json
-{
-  "email": "usuario@example.com"
-}
-```
 
 ### Respuestas
 
 ### Éxito
 
-**Código:** 202 Accepted
+**Código:** 200 OK
 
 ```json
-"Usuario con mail: usuario@example.com activado exitosamente"
+{
+  "id": 2,
+  "empleadoId": 2,
+  "rol": "normal",
+  "email": "ana@example.com",
+  "activo": true,
+  "createdAt": "2024-06-10T18:00:49.528Z",
+  "updatedAt": "2024-06-10T18:01:01.523Z",
+  "Empleado": {
+    "id": 2,
+    "nombre": "Ana Gomez",
+    "rol": "normal",
+    "cedula": 87654321,
+    "habilitado": true,
+    "createdAt": "2024-06-10T18:00:49.391Z",
+    "updatedAt": "2024-06-10T18:00:49.391Z"
+  }
+}
 ```
 
 ### Errores
 
 #### Error 400 - Bad Request
 
-**Causa:** Falta el email.
+**Causa:** Id pasado en parametros no es un entero
 
 ```json
-{ "error": "Email es obligatorio" }
-```
-
-**Causa:** Usuario ya activado.
-
-```json
-{ "error": "Usuario ya esta activado" }
+{ "error": "El parámetro ${paramName} debe ser un entero" }
 ```
 
 #### Error 401 - Unauthorized
@@ -70,21 +73,13 @@ Se debera incluir Authorization header con jwt creado con un usuario de tipo **A
 { "error": "Debe iniciar sesión como administrador." }
 ```
 
-#### Error 404 - Not Found
-
-**Causa:** Usuario con ese email no existe.
-
-```json
-{ "error": "Usuario con ese mail no existe" }
-```
-
 #### Error 500 - Internal Server Error
 
-**Causa:** Error general del servidor.
+**Causa:** Error del servidor o errores específicos de Sequelize.
 
 ```json
 {
-  "error": "Error al activar usuario",
-  "detalle": "Mensaje de error"
+  "error": "Error al modificar el usuario",
+  "detalle": ["Detalle del error de Sequelize"]
 }
 ```

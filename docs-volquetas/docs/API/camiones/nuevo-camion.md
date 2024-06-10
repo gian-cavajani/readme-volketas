@@ -1,5 +1,3 @@
-## Registrar Camion
-
 ```http
 POST /api/camiones
 ```
@@ -30,52 +28,57 @@ Se debera incluir Authorization header con jwt creado con el usuario en el metod
 
 #### Éxito
 
-- **Código**: 201 Created
+**Código**: 201 Created
 
-  - **Contenido**:
-
-    ```json
-    {
-      "id": 1,
-      "matricula": "ABC123",
-      "modelo": "Modelo XYZ",
-      "anio": 2020,
-      "estado": "Disponible",
-      "createdAt": "2024-06-01T00:00:00.000Z",
-      "updatedAt": "2024-06-01T00:00:00.000Z"
-    }
-    ```
+```json
+{
+  "id": 1,
+  "matricula": "ABC123",
+  "modelo": "Modelo XYZ",
+  "anio": 2020,
+  "estado": "Disponible",
+  "createdAt": "2024-06-01T00:00:00.000Z",
+  "updatedAt": "2024-06-01T00:00:00.000Z"
+}
+```
 
 #### Errores
 
 #### Error 400 - Bad Request
 
-- **Causa**: No tiene matricula o modelo
-  - Contenido:
-    ```json
-    { "error": "No tiene matricula o modelo" }
-    ```
+**Causa**: No tiene matricula o modelo
+
+```json
+{ "error": "No tiene matricula o modelo" }
+```
 
 #### Error 401 - Unauthorized
 
-- **Causa:** Token de autorización no proporcionado.
-  - **Contenido:**
-    ```json
-    { "error": "Token de autorización no proporcionado" }
-    ```
-- **Causa:** Token de autorización invalido o vencido.
-  - **Contenido:**
-    ```json
-    { "error": "Debe iniciar Sesion - TOKEN INVALIDO" }
-    ```
+**Causa:** Token de autorización no proporcionado.
+
+```json
+{ "error": "Token de autorización no proporcionado" }
+```
+
+**Causa:** Token de autorización vencido.
+
+```json
+{ "error": "El token expiró, inicie sesión nuevamente" }
+```
+
+**Causa:** Token inválido
+
+```json
+{ "error": "Token inválido, inicie sesión nuevamente" }
+```
 
 #### Error 500 - Internal Server Error
 
-- **Causa:** Error al crear el camion.
-  - Contenido:
-    ```json
-    {
-      "error": "Error al crear camion",
-      "detalle": ["Detalle del error de Sequelize"]
-    }
-    ```
+**Causa:** Error al crear el camion.
+
+```json
+{
+  "error": "Error al crear camion",
+  "detalle": ["Detalle del error de Sequelize"]
+}
+```

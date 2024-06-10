@@ -24,52 +24,64 @@ Se debera incluir Authorization header con jwt creado con el usuario en el metod
 }
 ```
 
-### Respuestas
+## Respuestas
 
-#### Éxito
+### Éxito
 
-- **Código**: 200 OK
+**Código**: 200 OK
 
-  - **Contenido**:
-    ```json
-    {
-      "matricula": "ABC123",
-      "modelo": "Scania",
-      "anio": 2021,
-      "estado": "Inactivo"
-    }
-    ```
+```json
+{
+  "matricula": "ABC123",
+  "modelo": "Scania",
+  "anio": 2021,
+  "estado": "Inactivo"
+}
+```
 
-#### Errores
+#### Error 400 - Bad Request
+
+**Causa:** Id pasado en parametros no es un entero
+
+```json
+{ "error": "El parámetro ${paramName} debe ser un entero" }
+```
 
 #### Error 401 - Unauthorized
 
-- **Causa:** Token de autorización no proporcionado.
-  - **Contenido:**
-    ```json
-    { "error": "Token de autorización no proporcionado" }
-    ```
-- **Causa:** Token de autorización invalido o vencido.
-  - **Contenido:**
-    ```json
-    { "error": "Debe iniciar Sesion - TOKEN INVALIDO" }
-    ```
+**Causa:** Token de autorización no proporcionado.
+
+```json
+{ "error": "Token de autorización no proporcionado" }
+```
+
+**Causa:** Token de autorización vencido.
+
+```json
+{ "error": "El token expiró, inicie sesión nuevamente" }
+```
+
+**Causa:** Token inválido
+
+```json
+{ "error": "Token inválido, inicie sesión nuevamente" }
+```
 
 #### Error 404 - Not Found
 
-- **Causa:** Camión no encontrado.
-  - **Contenido:**
-    ```json
-    { "error": "Camión no encontrado." }
-    ```
+**Causa:** Camión no encontrado.
+
+```json
+{ "error": "Camión no encontrado." }
+```
 
 #### Error 500 - Internal Server Error
 
-- **Causa:** Error al actualizar el camion.
-  - Contenido:
-    ```json
-    {
-      "error": "Error al actualizar el camion",
-      "detalle": ["Detalle del error de Sequelize"]
-    }
-    ```
+**Causa:** Error al actualizar el camion.
+
+```json
+{
+  "error": "Error al actualizar el camion",
+  "detalle": ["Detalle del error de Sequelize"]
+}
+```

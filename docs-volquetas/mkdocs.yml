@@ -4,9 +4,11 @@ site_author: Gianluca Cavajani
 
 theme:
   name: material
+  language: es
   features:
     - navigation.top
     - navigation.footer
+    - content.code.copy
 
   palette:
     - scheme: default

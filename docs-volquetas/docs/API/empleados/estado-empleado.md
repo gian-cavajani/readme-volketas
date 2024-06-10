@@ -1,8 +1,10 @@
-# Estado Empleado
-
 ```http
 PATCH /api/empleados/:empleadoId/estado
 ```
+
+### Descripción
+
+Modifica el estado (habilitado/deshabilitado) de un empleado.
 
 #### Parámetros y Headers de la Solicitud
 
@@ -14,60 +16,67 @@ Se debera incluir Authorization header con jwt creado con el usuario tipo **Admi
 
 #### Éxito
 
-- **Código**: 202 Accepted
+**Código**: 202 Accepted
 
-  - **Contenido**:
-
-    ```json
-    {
-      "detalle": "Empleado {nombre} con CI: {cedula} fue {habilitado/deshabilitado} exitosamente"
-    }
-    ```
+```json
+{
+  "detalle": "Empleado {nombre} con CI: {cedula} fue {habilitado/deshabilitado} exitosamente"
+}
+```
 
 #### Errores
 
 #### Error 400 - Bad Request
 
-- **Causa**: Id en parámetros no es un entero.
+**Causa**: Id en parámetros no es un entero.
 
-  - Contenido:
-    ```json
-    { "error": "El ID del empleado debe ser un entero" }
-    ```
-
-- **Causa:** El empleado no encontrado.
-  - **Contenido:**
-    ```json
-    {
-      "error": "Empleado no existe"
-    }
-    ```
+```json
+{ "error": "El ID del empleado debe ser un entero" }
+```
 
 #### Error 401 - Unauthorized
 
-- **Causa:** Token de autorización no proporcionado.
-  - **Contenido:**
-    ```json
-    { "error": "Token de autorización no proporcionado" }
-    ```
-- **Causa:** Token de autorización invalido o vencido.
-  - **Contenido:**
-    ```json
-    { "error": "Debe iniciar Sesion - TOKEN INVALIDO" }
-    ```
-- **Causa:** Usuario en el Token de autorización no es de tipo Admin.
-  - **Contenido:**
-    ```json
-    { "error": "Debe iniciar sesion como administrador para ver este segmento" }
-    ```
+**Causa:** Token de autorización no proporcionado.
+
+```json
+{ "error": "Token de autorización no proporcionado" }
+```
+
+**Causa:** Token de autorización vencido.
+
+```json
+{ "error": "El token expiró, inicie sesión nuevamente" }
+```
+
+**Causa:** Token inválido
+
+```json
+{ "error": "Token inválido, inicie sesión nuevamente" }
+```
+
+**Causa:** Token de autorización requerido no es de un usuario Admin.
+
+```json
+{ "error": "Debe iniciar sesión como administrador." }
+```
+
+#### Error 404 - Not Found
+
+**Causa**: El empleado con el ID especificado no fue encontrado.
+
+```json
+{
+  "error": "Empleado no existe"
+}
+```
 
 #### Error 500 - Internal Server Error
 
-- **Causa:** Error al obtener los empleados.
-  - Contenido:
-    ```json
-    {
-      "error": "Error al habilitar/deshabilitar al empleado",
-      "detalle": ["Detalle del error de Sequelize"]
-    }
-    ```
+**Causa:** Error al obtener los empleados.
+
+```json
+{
+  "error": "Error al habilitar/deshabilitar al empleado",
+  "detalle": ["Detalle del error de Sequelize"]
+}
+```

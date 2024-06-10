@@ -1,5 +1,3 @@
-## Registrar Usuario
-
 ```http
 POST /api/usuarios
 ```
@@ -32,63 +30,68 @@ No se deberan incluir Headers.
 
 ### Éxito
 
-- **Código:** 201 Created
-- **Contenido:**
-  ```json
-  {
-    "id": 1,
-    "email": "usuario@example.com",
-    "empleadoId": 1,
-    "rol": "admin",
-    "activo": false
-  }
-  ```
+**Código:** 201 Created
+
+```json
+{
+  "id": 1,
+  "email": "usuario@example.com",
+  "empleadoId": 1,
+  "rol": "admin",
+  "activo": false
+}
+```
 
 ### Errores
 
 #### Error 400 - Bad Request
 
-- **Causa:** Algún campo obligatorio falta o es inválido.
-  - **Contenido:**
-    ```json
-    { "error": "Todos los campos son obligatorios" }
-    ```
-- **Causa:** El email no es válido.
-  - **Contenido:**
-    ```json
-    { "error": "Email inválido" }
-    ```
-- **Causa:** Las contraseñas no coinciden.
-  - **Contenido:**
-    ```json
-    { "error": "Las contraseñas no coinciden" }
-    ```
-- **Causa:** El rol no es válido.
-  - **Contenido:**
-    ```json
-    { "error": "Rol inválido" }
-    ```
-- **Causa:** El empleado no existe.
-  - **Contenido:**
-    ```json
-    { "error": "Empleado no existe" }
-    ```
+**Causa:** Algún campo obligatorio falta o es inválido.
+
+```json
+{ "error": "Todos los campos son obligatorios" }
+```
+
+**Causa:** El email no es válido.
+
+```json
+{ "error": "Email inválido" }
+```
+
+**Causa:** Las contraseñas no coinciden.
+
+```json
+{ "error": "Las contraseñas no coinciden" }
+```
+
+**Causa:** El rol no es válido.
+
+```json
+{ "error": "Rol inválido" }
+```
+
+**Causa:** El empleado no existe.
+
+```json
+{ "error": "Empleado no existe" }
+```
 
 #### Error 500 - Internal Server Error
 
-- **Causa:** Error del servidor o errores específicos de Sequelize.
-  - **Contenido:**
-    ```json
-    {
-      "error": "Error al crear usuario",
-      "detalle": ["Detalle del error de Sequelize"]
-    }
-    ```
-- **Causa:** Error general del servidor.
-  - **Contenido:**
-    ```json
-    {
-      "error": "Error al crear usuario",
-      "detalle": "Mensaje de error"
-    }
-    ```
+**Causa:** Error del servidor o errores específicos de Sequelize.
+
+```json
+{
+  "error": "Error al crear usuario",
+  "detalle": ["Detalle del error de Sequelize"]
+}
+```
+
+**Causa:** Error general del servidor.
+
+```json
+{
+  "error": "Error al crear usuario",
+  "detalle": "Mensaje de error"
+}
+```

@@ -1,5 +1,3 @@
-# Registrar Empleado
-
 ```http
 POST /api/empleados
 ```
@@ -28,57 +26,63 @@ Se debera incluir Authorization header con jwt creado con el usuario en el metod
 
 #### Éxito
 
-- **Código**: 201 Created
+**Código**: 201 Created
 
-  - **Contenido**:
-
-    ```json
-    {
-      "id": 1,
-      "nombre": "Juan Perez",
-      "cedula": "12345678",
-      "rol": "admin",
-      "habilitado": "true",
-      "createdAt": "2024-06-01T00:00:00.000Z",
-      "updatedAt": "2024-06-01T00:00:00.000Z"
-    }
-    ```
+```json
+{
+  "id": 1,
+  "nombre": "Juan Perez",
+  "cedula": "12345678",
+  "rol": "admin",
+  "habilitado": "true",
+  "createdAt": "2024-06-01T00:00:00.000Z",
+  "updatedAt": "2024-06-01T00:00:00.000Z"
+}
+```
 
 #### Errores
 
 #### Error 400 - Bad Request
 
-- **Causa**: La cédula no tiene 8 dígitos.
-  - Contenido:
-    ```json
-    { "error": "Cedula invalida, deben ser 8 numeros" }
-    ```
-- **Causa**: Rol no es ni "admin", ni "normal", ni "chofer".
-  - Contenido:
-    ```json
-    { "error": "Rol invalido" }
-    ```
+**Causa**: La cédula no tiene 8 dígitos.
+
+```json
+{ "error": "Cedula invalida, deben ser 8 numeros" }
+```
+
+**Causa**: Rol no es ni "admin", ni "normal", ni "chofer".
+
+```json
+{ "error": "Rol invalido" }
+```
 
 #### Error 401 - Unauthorized
 
-- **Causa:** Token de autorización no proporcionado.
-  - **Contenido:**
-    ```json
-    { "error": "Token de autorización no proporcionado" }
-    ```
-- **Causa:** Token de autorización invalido o vencido.
-  - **Contenido:**
-    ```json
-    { "error": "Debe iniciar Sesion - TOKEN INVALIDO" }
-    ```
+**Causa:** Token de autorización no proporcionado.
+
+```json
+{ "error": "Token de autorización no proporcionado" }
+```
+
+**Causa:** Token de autorización vencido.
+
+```json
+{ "error": "El token expiró, inicie sesión nuevamente" }
+```
+
+**Causa:** Token inválido
+
+```json
+{ "error": "Token inválido, inicie sesión nuevamente" }
+```
 
 #### Error 500 - Internal Server Error
 
-- **Causa:** Error al crear el empleado.
-  - Contenido:
-    ```json
-    {
-      "error": "Error al crear empleado",
-      "detalle": ["Detalle del error de Sequelize"]
-    }
-    ```
+**Causa:** Error al crear el empleado.
+
+```json
+{
+  "error": "Error al crear empleado",
+  "detalle": ["Detalle del error de Sequelize"]
+}
+```

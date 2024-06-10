@@ -1,10 +1,6 @@
 ```http
-GET /api/empleados
+GET /api/usuarios
 ```
-
-### Descripción
-
-Obtiene una lista de todos los empleados, incluyendo sus teléfonos asociados.
 
 #### Parámetros y Headers de la Solicitud
 
@@ -14,30 +10,20 @@ Se debera incluir Authorization header con jwt creado con el usuario en el metod
 
 ### Respuestas
 
-#### Éxito
+### Éxito
 
-**Código**: 200 OK
+**Código:** 200 OK
 
 ```json
 [
   {
-    "id": 1,
-    "nombre": "Juan Perez",
-    "rol": "chofer",
-    "cedula": 12345678,
-    "habilitado": true,
-    "createdAt": "2024-06-07T22:31:06.148Z",
-    "updatedAt": "2024-06-07T22:31:06.148Z",
-    "TelefonoPropietarios": [
-      {
-        "telefonoId": 1,
-        "Telefonos": {
-          "telefono": "24127332",
-          "tipo": "telefono"
-        }
-      }
-    ]
-  }
+    "id": 2,
+    "rol": "normal",
+    "email": "usuario@example.com",
+    "empleadoId": 1,
+    "activo": false
+  },
+  {...}
 ]
 ```
 
@@ -71,11 +57,11 @@ Se debera incluir Authorization header con jwt creado con el usuario en el metod
 
 #### Error 500 - Internal Server Error
 
-**Causa:** Error al obtener los empleados.
+**Causa:** Error general del servidor.
 
 ```json
 {
-  "error": "Error al obtener los empleados",
-  "detalle": ["Detalle del error de Sequelize"]
+  "error": "Error al obtener los usuario",
+  "detalle": "Mensaje de error"
 }
 ```

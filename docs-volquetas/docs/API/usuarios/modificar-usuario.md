@@ -1,12 +1,19 @@
 ```http
-POST /api/usuarios/confirmar
+PUT /api/usuarios/id
 ```
 
 #### Parámetros y Headers de la Solicitud
 
+URL:
+
+`usuarioId` (integer, required): El ID del usuario a modificar.
+
 La solicitud debe ser de tipo JSON y debe incluir los siguientes campos en el body:
 
-- `email` (string): El email del usuario.
+- `rol` (string, optional): El rol del usuario.
+- `email` (string, optional): El correo electrónico del usuario.
+- `password` (string, optional): La contraseña del usuario.
+- `activo` (boolean, optional): El estado activo del usuario.
 
 Se debera incluir Authorization header con jwt creado con un usuario de tipo **Admin** en el metodo `POST /usuarios/login`
 
@@ -14,7 +21,10 @@ Se debera incluir Authorization header con jwt creado con un usuario de tipo **A
 
 ```json
 {
-  "email": "usuario@example.com"
+  "rol": "admin",
+  "email": "usuario@example.com",
+  "password": "password123",
+  "confirmPassword": "password123"
 }
 ```
 
@@ -22,26 +32,23 @@ Se debera incluir Authorization header con jwt creado con un usuario de tipo **A
 
 ### Éxito
 
-**Código:** 202 Accepted
+**Código:** 200 OK
 
 ```json
-"Usuario con mail: usuario@example.com activado exitosamente"
+{
+  "rol": "admin",
+  "email": "usuario@example.com"
+}
 ```
 
 ### Errores
 
 #### Error 400 - Bad Request
 
-**Causa:** Falta el email.
+**Causa:** Id pasado en parametros no es un entero
 
 ```json
-{ "error": "Email es obligatorio" }
-```
-
-**Causa:** Usuario ya activado.
-
-```json
-{ "error": "Usuario ya esta activado" }
+{ "error": "El parámetro ${paramName} debe ser un entero" }
 ```
 
 #### Error 401 - Unauthorized
@@ -70,21 +77,13 @@ Se debera incluir Authorization header con jwt creado con un usuario de tipo **A
 { "error": "Debe iniciar sesión como administrador." }
 ```
 
-#### Error 404 - Not Found
-
-**Causa:** Usuario con ese email no existe.
-
-```json
-{ "error": "Usuario con ese mail no existe" }
-```
-
 #### Error 500 - Internal Server Error
 
-**Causa:** Error general del servidor.
+**Causa:** Error del servidor o errores específicos de Sequelize.
 
 ```json
 {
-  "error": "Error al activar usuario",
-  "detalle": "Mensaje de error"
+  "error": "Error al modificar el usuario",
+  "detalle": ["Detalle del error de Sequelize"]
 }
 ```
