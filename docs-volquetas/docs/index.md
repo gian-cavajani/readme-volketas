@@ -2,9 +2,13 @@
 
 Proyecto de gestor de volquetas en node.js con postgressql.
 
+Repositorio del proyecto: https://github.com/gian-cavajani/volquetas
+
+Repositorio de la documentacion: https://github.com/gian-cavajani/readme-volketas
+
 #### Relacionado:
 
-Proyecto frontend en Reactjs: [Frontend](https://github.com/davidLB890/volquetasFront)
+Repositorio del Proyecto frontend en Reactjs: [Frontend](https://github.com/davidLB890/volquetasFront)
 
 ## Librerias NPM utilizadas
 
