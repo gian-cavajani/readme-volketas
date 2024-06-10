@@ -2,7 +2,7 @@
 
 ## Endpoint `/api/usuarios`
 
-Esta API permite la gestión de usuarios en un sistema. Incluye la creación de nuevos usuarios, autenticación, activación de usuarios y la obtención de la lista de usuarios.
+El endpoint de usuarios permite gestionar usuarios en el sistema. Proporciona funcionalidades para registrar nuevos usuarios, iniciar sesión, obtener información del usuario actual y administrar usuarios existentes, como cambiar contraseñas y desactivar cuentas.
 
 ### Usuarios
 

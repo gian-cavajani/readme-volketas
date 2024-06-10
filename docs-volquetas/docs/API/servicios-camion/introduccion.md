@@ -2,7 +2,7 @@
 
 Esta API permite la gestión de los servicios de los camiones en un sistema. Incluye la creación de nuevos servicios, obtención de servicios.
 
-### servicios
+### Servicios
 
 | Método                         | Descripción                              | Tipo de Token |
 | ------------------------------ | ---------------------------------------- | ------------- |

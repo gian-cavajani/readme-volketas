@@ -2,7 +2,7 @@
 
 Esta API permite la gestión de los usos del camion en un sistema. Incluye la creación de nuevos registros para el uso, obtención de registros por periodos y de la lista de empleados/camiones.
 
-### Jornales
+### Metodos HTTP
 
 | Método                                    | Descripción                                                       | Tipo de Token |
 | ----------------------------------------- | ----------------------------------------------------------------- | ------------- |

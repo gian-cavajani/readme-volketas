@@ -1,6 +1,6 @@
 ## Endpoint `/api/empleados`
 
-Esta API permite la gestión de empleados en un sistema. Incluye la creación de nuevos empleados, obtención de un empleado y de la lista de empleados.
+El endpoint de empleados proporciona funcionalidades para gestionar la información de los empleados de la empresa. Permite agregar nuevos empleados, editar la información de empleados existentes, eliminar empleados y obtener detalles de un empleado específico.
 
 ### Empleados
 

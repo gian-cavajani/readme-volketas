@@ -2,7 +2,7 @@
 
 ## Endpoint `/api/camiones`
 
-Esta API permite la gestión de camiones en un sistema. Incluye la creación, obtención, modificacion y borrado de camiones.
+El endpoint de camiones ofrece funcionalidades para gestionar la información de los camiones de la empresa. Permite agregar nuevos camiones, editar la información de camiones existentes, eliminar camiones y obtener detalles de un camión específico.
 
 ### Métodos HTTP
 

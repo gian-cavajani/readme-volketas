@@ -1,6 +1,6 @@
 ## Endpoint `/api/jornales`
 
-Esta API permite la gestión de jornales en un sistema. Incluye la creación de nuevos jornales, obtención de jornales por periodos y de la lista de jornales.
+La API proporciona endpoints para gestionar jornales de empleados. Permite crear, editar, eliminar y obtener jornales individuales o por periodo. También proporciona endpoints para obtener las horas trabajadas por empleado en un periodo específico. La autenticación se realiza mediante tokens JWT.
 
 ### Jornales
 
