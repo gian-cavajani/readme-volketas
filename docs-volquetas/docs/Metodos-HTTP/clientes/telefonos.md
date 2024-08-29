@@ -1,0 +1,14 @@
+---
+hide:
+    - toc
+---
+
+## Telefono:
+
+| Método HTTP | Endpoint           | Descripción                      | Parámetros (Body/Query/Path)                                                             | Respuesta Exitosa                                | Respuesta de Error                                                                                                                                                                  | Token de Login |
+| ----------- | ------------------ | -------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| POST        | /api/telefonos     | Crear un nuevo teléfono          | Body: `telefono`, `tipo`, `extension`, `empleadoId`, `contactoEmpresaId`, `particularId` | 201 Created con los detalles del nuevo teléfono  | 400 Bad Request si el teléfono no es numérico, tipo inválido, teléfono o propietario faltan, o longitud incorrecta <br>500 Internal Server Error con detalles del error de creación | Requerido      |
+| GET         | /api/telefonos     | Obtener todos los teléfonos      | \-                                                                                       | 200 OK con la lista de teléfonos                 | 500 Internal Server Error con detalles del error al obtener los teléfonos                                                                                                           | Requerido      |
+| GET         | /api/telefonos/:id | Obtener un teléfono por ID       | Path: `telefonoId`                                                                       | 200 OK con los detalles del teléfono             | 400 Not Found si el teléfono no existe <br>500 Internal Server Error con detalles del error al obtener el teléfono                                                                  | Requerido      |
+| PUT         | /api/telefonos/:id | Actualizar un teléfono existente | Path: `telefonoId` <br>Body: `telefono`, `tipo`                                          | 200 OK con los detalles del teléfono actualizado | 400 Bad Request si el celular tiene longitud incorrecta <br>400 Not Found si el teléfono no existe <br>500 Internal Server Error con detalles del error de actualización            | Requerido      |
+| DELETE      | /api/telefonos/:id | Eliminar un teléfono             | Path: `telefonoId`                                                                       | 200 OK con mensaje de éxito                      | 400 Not Found si el teléfono no existe <br>500 Internal Server Error con detalles del error de eliminación                                                                          | Requerido      |

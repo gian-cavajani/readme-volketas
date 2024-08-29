@@ -3,6 +3,7 @@
 Proyecto de gestor de volquetas en node.js con postgressql.
 
 [Repositorio del proyecto en node](https://github.com/gian-cavajani/volquetas)
+
 [Repositorio de la documentacion](https://github.com/gian-cavajani/readme-volketas)
 
 #### Relacionado:
@@ -13,18 +14,18 @@ Repositorio del Proyecto frontend en Reactjs: [Frontend](https://github.com/davi
 
 #### Librerias de Produccion:
 
-- bcryptjs: `version: 2.4.3`
-- cors: `version: 2.8.5`
-- dotenv: `version: 16.4.5`
-- express: `version: 4.19.2`
-- jsonwebtoken: `version: 9.0.2`
-- pg: `version: 8.11.5`
-- sequelize: `version: 6.37.3`
-- validator: `version: 13.12.0`
+-   bcryptjs: `version: 2.4.3`
+-   cors: `version: 2.8.5`
+-   dotenv: `version: 16.4.5`
+-   express: `version: 4.19.2`
+-   jsonwebtoken: `version: 9.0.2`
+-   pg: `version: 8.11.5`
+-   sequelize: `version: 6.37.3`
+-   validator: `version: 13.12.0`
 
 #### Librerias de Desarrollo:
 
-- nodemon: `version 3.1.1`
+-   nodemon: `version 3.1.1`
 
 ## Variables de Entorno
 

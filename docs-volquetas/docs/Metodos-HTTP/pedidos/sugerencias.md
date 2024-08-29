@@ -1,0 +1,13 @@
+---
+hide:
+    - toc
+---
+
+## Sugerencias:
+
+| Método HTTP | Endpoint                   | Descripción                                                | Parámetros (Body/Query/Path)                                            | Respuesta Exitosa                                                  | Respuesta de Error                                                                                                                                           | Token de Login   |
+| ----------- | -------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
+| POST        | /api/sugerencias           | Crear una nueva sugerencia                                 | Body: `horarioSugerido`, `choferSugeridoId`, `tipoSugerido`, `pedidoId` | 201 Created con los detalles de la nueva sugerencia                | 400 Bad Request si el pedido no existe, tipoSugerido inválido, o sugerencia ya existe <br>500 Internal Server Error con detalles del error de creación       | Requerido        |
+| PUT         | /api/sugerencias/:id       | Actualizar una sugerencia existente                        | Path: `sugerenciaId` <br>Body: `horarioSugerido`, `choferSugeridoId`    | `202 Accepted` con los detalles de la sugerencia actualizada       | 400 Not Found si la sugerencia no existe <br>400 Bad Request si el chofer no es válido <br>500 Internal Server Error con detalles del error de actualización | Requerido        |
+| DELETE      | /api/sugerencias/:id       | Eliminar una sugerencia                                    | Path: `sugerenciaId`                                                    | 200 OK con mensaje de éxito                                        | 400 Not Found si la sugerencia no existe <br>500 Internal Server Error con detalles del error de eliminación                                                 | Requerido(Admin) |
+| GET         | /api/sugerencias/verificar | Verificar sugerencias para un chofer en un rango de tiempo | Query: `choferId`, `horario`                                            | 200 OK con la lista de sugerencias o mensaje si no hay sugerencias | 400 Bad Request si `choferId` o `horario` faltan <br>500 Internal Server Error con detalles del error de verificación                                        | Requerido        |

@@ -1,0 +1,5454 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentacion para proyecto de volquetas">
+      
+      
+        <meta name="author" content="Gianluca Cavajani">
+      
+      
+      
+        <link rel="prev" href="../documentacion-backend-metodos/">
+      
+      
+        <link rel="next" href="../../../Metodos-HTTP/cajas/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>Documentacion backend modelos - Documentacion Volquetas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modelo-cajas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Documentacion Volquetas" class="md-header__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentacion Volquetas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Documentacion backend modelos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Documentacion Volquetas" class="md-nav__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Documentacion Volquetas
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyecto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Manual De Deploy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Manual De Deploy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manual de Deploy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Crear-Instancias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01 Crear Instancias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Configurar-Security-Rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02 Configurar Security Rules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Configurar-IPs-Elasticas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03 Configurar IPs Elasticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Configurar-Putty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04 Configurar Putty
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Comprar-y-Configurar-Dominios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 Comprar y Configurar Dominios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Configuracion-inicial-del-servidor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 Configuracion inicial del servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-Configurar-NGINX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07 Configurar NGINX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-Deploy-Build-React/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08 Deploy Build React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-Configurar-Instancia-de-Base-de-datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09 Configurar Instancia de Base de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-Deploy-Backend/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 Deploy Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-Configurar-Certificados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 Configurar Certificados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Old
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            Old
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion-backend-metodos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentación de los Métodos HTTP del Proyecto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Documentacion backend modelos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Documentacion backend modelos
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-cajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Cajas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Cajas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-camiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Camiones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Camiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Config
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-contactoempresas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: ContactoEmpresas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: ContactoEmpresas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-empleados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Empleados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Empleados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-empresas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Empresas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Empresas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-facturas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Facturas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Facturas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-historicousocamion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: HistoricoUsoCamion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: HistoricoUsoCamion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-jornales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Jornales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Jornales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-movimientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Movimientos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Movimientos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-obras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Obras
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Obras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-obradetalles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: ObraDetalles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: ObraDetalles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-pagopedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: PagoPedidos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: PagoPedidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-pagopedidos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: PagoPedidos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: PagoPedidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-particulares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Particulares
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Particulares">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Pedidos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Pedidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Permisos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Permisos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Servicios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Servicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-sugerencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Sugerencias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Sugerencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-telefonos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Telefonos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Telefonos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Usuarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Usuarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-volquetas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Volquetas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Volquetas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Metodos HTTP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Metodos HTTP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/cajas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cajas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/camiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Camiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/contacto-empresas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contacto empresas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/doc2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Doc2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/empleados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empleados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/empresas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empresas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/errores-genericos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errores genericos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/facturas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Facturas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/historico-uso-camion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Historico uso camion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/jornales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jornales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/movimientos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Movimientos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/obra-detalles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obra detalles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/obras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obras
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/pago-pedidos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pago pedidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/particulares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Particulares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/pedidos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pedidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/permisos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Permisos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/servicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/sugerencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sugerencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/telefonos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Telefonos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/usuarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usuarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Metodos-HTTP/volquetas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volquetas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modelos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Modelos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/cajas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cajas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/camiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Camiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/contacto-empresas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contacto empresas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/empleados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empleados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/empresas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empresas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/facturas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Facturas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/historico-uso-camion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Historico uso camion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/jornales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jornales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/movimientos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Movimientos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/obra-detalles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obra detalles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/obras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obras
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/pago-pedidos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pago pedidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/particulares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Particulares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/pedidos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pedidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/permisos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Permisos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/servicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/sugerencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sugerencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/telefonos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Telefonos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/usuarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usuarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Modelos/volquetas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volquetas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-cajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Cajas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Cajas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-camiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Camiones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Camiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Config
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-contactoempresas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: ContactoEmpresas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: ContactoEmpresas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-empleados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Empleados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Empleados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-empresas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Empresas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Empresas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-facturas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Facturas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Facturas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-historicousocamion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: HistoricoUsoCamion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: HistoricoUsoCamion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-jornales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Jornales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Jornales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-movimientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Movimientos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Movimientos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-obras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Obras
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Obras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-obradetalles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: ObraDetalles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: ObraDetalles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-pagopedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: PagoPedidos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: PagoPedidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-pagopedidos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: PagoPedidos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: PagoPedidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-particulares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Particulares
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Particulares">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Pedidos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Pedidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Permisos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Permisos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Servicios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Servicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-sugerencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Sugerencias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Sugerencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-telefonos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Telefonos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Telefonos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Usuarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Usuarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-volquetas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo: Volquetas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo: Volquetas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Documentacion backend modelos</h1>
+
+<ul>
+<li><a href="#Modelo: Cajas" title="wikilink">Modelo: `Cajas`</a></li>
+<li><a href="#Modelo: Camiones" title="wikilink">Modelo: `Camiones`</a></li>
+<li><a href="#Modelo: Config" title="wikilink">Modelo: `Config`</a></li>
+<li><a href="#Modelo: ContactoEmpresas" title="wikilink">Modelo: `ContactoEmpresas`</a></li>
+<li><a href="#Modelo: Empleados" title="wikilink">Modelo: `Empleados`</a></li>
+<li><a href="#Modelo: Empresas" title="wikilink">Modelo: `Empresas`</a></li>
+<li><a href="#Modelo: Facturas" title="wikilink">Modelo: `Facturas`</a></li>
+<li><a href="#Modelo: HistoricoUsoCamion" title="wikilink">Modelo: `HistoricoUsoCamion`</a></li>
+<li><a href="#Modelo: Jornales" title="wikilink">Modelo: `Jornales`</a></li>
+<li><a href="#Modelo: Movimientos" title="wikilink">Modelo: `Movimientos`</a></li>
+<li><a href="#Modelo: Obras" title="wikilink">Modelo: `Obras`</a></li>
+<li><a href="#Modelo: ObraDetalles" title="wikilink">Modelo: `ObraDetalles`</a></li>
+<li><a href="#Modelo: PagoPedidos" title="wikilink">Modelo: `PagoPedidos`</a></li>
+<li><a href="#Modelo: PagoPedidos" title="wikilink">Modelo: `PagoPedidos`</a></li>
+<li><a href="#Modelo: Particulares" title="wikilink">Modelo: `Particulares`</a></li>
+<li><a href="#Modelo: Pedidos" title="wikilink">Modelo: `Pedidos`</a></li>
+<li><a href="#Modelo: Permisos" title="wikilink">Modelo: `Permisos`</a></li>
+<li><a href="#Modelo: Servicios" title="wikilink">Modelo: `Servicios`</a></li>
+<li><a href="#Modelo: Sugerencias" title="wikilink">Modelo: `Sugerencias`</a></li>
+<li><a href="#Modelo: Telefonos" title="wikilink">Modelo: `Telefonos`</a></li>
+<li><a href="#Modelo: Usuarios" title="wikilink">Modelo: `Usuarios`</a></li>
+<li><a href="#Modelo: Volquetas" title="wikilink">Modelo: `Volquetas`</a></li>
+</ul>
+<h2 id="modelo-cajas">Modelo: <code>Cajas</code><a class="headerlink" href="#modelo-cajas" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion">Descripción<a class="headerlink" href="#descripcion" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Cajas</code> representa registros financieros en la caja, como gastos, ingresos, y otros movimientos contables. Cada registro incluye información sobre la fecha, motivo, descripción, moneda, monto, y referencias a empleados y pedidos relacionados.</p>
+<h3 id="campos">Campos<a class="headerlink" href="#campos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del registro en la tabla <code>Cajas</code>.</p>
+</li>
+<li>
+<p><strong><code>fecha</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>DATEONLY</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Fecha del movimiento registrado en la caja.</p>
+</li>
+<li>
+<p><strong><code>motivo</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM('vale', 'gasto', 'ingreso', 'ingreso pedido', 'ingreso cochera', 'extraccion')</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Motivo del movimiento en la caja (vale, gasto, ingreso, etc.).</p>
+</li>
+<li>
+<p><strong><code>descripcion</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Descripción opcional del movimiento.</p>
+</li>
+<li>
+<p><strong><code>moneda</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM('peso', 'dolar')</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Tipo de moneda en el registro (peso o dólar).</p>
+</li>
+<li>
+<p><strong><code>monto</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>FLOAT</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Monto del movimiento registrado en la caja.</p>
+</li>
+<li>
+<p><strong><code>empleadoId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Clave foránea que referencia al <code>Empleado</code> que realizó el movimiento, si aplica.</p>
+</li>
+<li>
+<p><strong><code>pedidoId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Clave foránea que referencia al <code>Pedido</code> asociado al movimiento, si aplica.</li>
+</ul>
+<h3 id="relaciones">Relaciones<a class="headerlink" href="#relaciones" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Relación con <code>Empleados</code></strong><ul>
+<li><strong>Tipo</strong>: N a 1 (Muchos a Uno)</li>
+</ul>
+</li>
+<li><strong>Relación con <code>Pedidos</code></strong><ul>
+<li><strong>Tipo</strong>: N a 1 (Muchos a Uno)</li>
+</ul>
+</li>
+</ol>
+<h2 id="modelo-camiones">Modelo: <code>Camiones</code><a class="headerlink" href="#modelo-camiones" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_1">Descripción<a class="headerlink" href="#descripcion_1" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Camiones</code> representa los vehículos utilizados en la empresa. Incluye información sobre la matrícula, modelo, año y estado del camión.</p>
+<h3 id="campos_1">Campos<a class="headerlink" href="#campos_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del registro en la tabla <code>Camiones</code>.</p>
+</li>
+<li>
+<p><strong><code>matricula</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li><strong>Único</strong>: Debe ser único en la tabla.</li>
+<li>Validaciones:<ul>
+<li>No puede estar vacío.</li>
+</ul>
+</li>
+<li>
+<p>Descripción: Matrícula del camión.</p>
+</li>
+<li>
+<p><strong><code>modelo</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>Validaciones:<ul>
+<li>No puede estar vacío.</li>
+</ul>
+</li>
+<li>
+<p>Descripción: Modelo del camión.</p>
+</li>
+<li>
+<p><strong><code>anio</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Año de fabricación del camión.</p>
+</li>
+<li>
+<p><strong><code>estado</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Estado actual del camión (por ejemplo, activo, en mantenimiento, etc.).</li>
+</ul>
+<h3 id="relaciones_1">Relaciones<a class="headerlink" href="#relaciones_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Relación con <code>HistoricoUsoCamion</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+<li><strong>Relación con <code>Servicios</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+<li><strong>Relación con <code>Movimientos</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+</ol>
+<h2 id="modelo-config">Modelo: <code>Config</code><a class="headerlink" href="#modelo-config" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_2">Descripción<a class="headerlink" href="#descripcion_2" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Config</code> representa la configuración relacionada con precios y horas de trabajo. Incluye información sobre el precio sin IVA, el precio con IVA, el año de la configuración y si la configuración está activa.</p>
+<h3 id="campos_2">Campos<a class="headerlink" href="#campos_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del registro en la tabla <code>Config</code>.</p>
+</li>
+<li>
+<p><strong><code>anio</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Año asociado a la configuración.</p>
+</li>
+<li>
+<p><strong><code>precioSinIva</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>FLOAT</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Precio base sin IVA.</p>
+</li>
+<li>
+<p><strong><code>precioConIva</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>FLOAT</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Precio con IVA. Este campo se calcula automáticamente basado en <code>precioSinIva</code>.</p>
+</li>
+<li>
+<p><strong><code>horasDeTrabajo</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Número de horas de trabajo asociadas a la configuración.</p>
+</li>
+<li>
+<p><strong><code>configActiva</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>BOOLEAN</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Indica si la configuración está activa (<code>true</code>) o no (<code>false</code>).</li>
+</ul>
+<h3 id="hooks">Hooks<a class="headerlink" href="#hooks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>beforeCreate</code></strong>: Calcula el <code>precioConIva</code> antes de que se cree un nuevo registro. Si <code>precioSinIva</code> tiene un valor, <code>precioConIva</code> se establece en <code>precioSinIva * 1.22</code>.</p>
+</li>
+<li>
+<p><strong><code>beforeUpdate</code></strong>: Calcula el <code>precioConIva</code> antes de que se actualice un registro existente. Si <code>precioSinIva</code> tiene un valor, <code>precioConIva</code> se establece en <code>precioSinIva * 1.22</code>.</p>
+</li>
+</ul>
+<h3 id="relaciones_2">Relaciones<a class="headerlink" href="#relaciones_2" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Config</code> no tiene relaciones.</p>
+<h2 id="modelo-contactoempresas">Modelo: <code>ContactoEmpresas</code><a class="headerlink" href="#modelo-contactoempresas" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_3">Descripción<a class="headerlink" href="#descripcion_3" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>ContactoEmpresas</code> representa los contactos asociados a empresas. Este modelo incluye información sobre el nombre del contacto, una descripción opcional, un email y las relaciones con las empresas y obras asociadas.</p>
+<h3 id="campos_3">Campos<a class="headerlink" href="#campos_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del contacto en la tabla <code>ContactoEmpresas</code>.</p>
+</li>
+<li>
+<p><strong><code>nombre</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Nombre del contacto.</p>
+</li>
+<li>
+<p><strong><code>descripcion</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Descripción adicional sobre el contacto.</p>
+</li>
+<li>
+<p><strong><code>email</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Correo electrónico del contacto. Debe ser un email válido (<code>validate: { isEmail: true }</code>).</p>
+</li>
+<li>
+<p><strong><code>empresaId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Referencia a la empresa a la que pertenece el contacto. Este campo es una clave foránea que referencia al modelo <code>Empresas</code>.</p>
+</li>
+<li>
+<p><strong><code>obraId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Referencia a una obra asociada al contacto. Este campo es una clave foránea que referencia al modelo <code>Obras</code>.</li>
+</ul>
+<h3 id="relaciones_3">Relaciones<a class="headerlink" href="#relaciones_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Relación con <code>Empresas</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+<li><strong>Relación con <code>Obras</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+</ol>
+<h2 id="modelo-empleados">Modelo: <code>Empleados</code><a class="headerlink" href="#modelo-empleados" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_4">Descripción<a class="headerlink" href="#descripcion_4" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Empleados</code> representa a los empleados de la empresa. Este modelo incluye información sobre el nombre, rol, cédula, estado de habilitación, fechas de entrada y salida de la empresa, y dirección de cada empleado.</p>
+<h3 id="campos_4">Campos<a class="headerlink" href="#campos_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del empleado en la tabla <code>Empleados</code>.</p>
+</li>
+<li>
+<p><strong><code>nombre</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Nombre del empleado.</p>
+</li>
+<li>
+<p><strong><code>rol</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM</code></p>
+</li>
+<li>Valores permitidos: <code>'admin'</code>, <code>'normal'</code>, <code>'chofer'</code>.</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Rol del empleado dentro de la empresa.</p>
+</li>
+<li>
+<p><strong><code>cedula</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING(8)</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>Único: Sí.</li>
+<li>
+<p>Descripción: Cédula del empleado. Debe ser única en la tabla <code>Empleados</code>.</p>
+</li>
+<li>
+<p><strong><code>habilitado</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>BOOLEAN</code></p>
+</li>
+<li>Valor por defecto: <code>true</code>.</li>
+<li>
+<p>Descripción: Estado de habilitación del empleado. Indica si el empleado está habilitado o no.</p>
+</li>
+<li>
+<p><strong><code>fechaEntrada</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>DATEONLY</code></p>
+</li>
+<li>
+<p>Descripción: Fecha en la que el empleado comenzó a trabajar.</p>
+</li>
+<li>
+<p><strong><code>fechaSalida</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>DATEONLY</code></p>
+</li>
+<li>Valor por defecto: <code>null</code>.</li>
+<li>
+<p>Descripción: Fecha en la que el empleado dejó de trabajar. Si el empleado sigue trabajando, este campo será <code>null</code>.</p>
+</li>
+<li>
+<p><strong><code>direccion</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Descripción: Dirección del empleado.</li>
+</ul>
+<h3 id="relaciones_4">Relaciones<a class="headerlink" href="#relaciones_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Relación con <code>Usuarios</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a 1</li>
+</ul>
+</li>
+<li><strong>Relación con <code>HistoricoUsoCamion</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+<li><strong>Relación con <code>Jornales</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+<li><strong>Relación con <code>Telefonos</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+<li><strong>Relación con <code>Cajas</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+<li><strong>Relación con <code>Sugerencias</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+</ol>
+<h2 id="modelo-empresas">Modelo: <code>Empresas</code><a class="headerlink" href="#modelo-empresas" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_5">Descripción<a class="headerlink" href="#descripcion_5" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Empresas</code> representa a las empresas dentro del sistema. Este modelo incluye información sobre el RUT, nombre, razón social y descripción de cada empresa.</p>
+<h3 id="campos_5">Campos<a class="headerlink" href="#campos_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único de la empresa en la tabla <code>Empresas</code>.</p>
+</li>
+<li>
+<p><strong><code>rut</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING(12)</code></p>
+</li>
+<li>Único: Sí.</li>
+<li>
+<p>Descripción: RUT (Rol Único Tributario) de la empresa. Este campo puede ser nulo y debe ser único si se proporciona.</p>
+</li>
+<li>
+<p><strong><code>nombre</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Nombre de la empresa.</p>
+</li>
+<li>
+<p><strong><code>razonSocial</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>
+<p>Descripción: Razón social de la empresa. Es un campo opcional.</p>
+</li>
+<li>
+<p><strong><code>descripcion</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Descripción: Descripción adicional sobre la empresa. Es un campo opcional.</li>
+</ul>
+<h3 id="relaciones_5">Relaciones<a class="headerlink" href="#relaciones_5" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Relación con <code>ContactoEmpresas</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+<li><strong>Relación con <code>Obras</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+<li><strong>Relación con <code>Permisos</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+<li><strong>Relación con <code>Cajas</code></strong><ul>
+<li><strong>Tipo</strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+</li>
+</ol>
+<h2 id="modelo-facturas">Modelo: <code>Facturas</code><a class="headerlink" href="#modelo-facturas" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_6">Descripción<a class="headerlink" href="#descripcion_6" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Facturas</code> representa una factura en el sistema. Incluye información sobre el tipo de factura, numeración, estado, fecha de pago, monto y descripción.</p>
+<h3 id="campos_6">Campos<a class="headerlink" href="#campos_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único de la factura en la tabla <code>Facturas</code>.</p>
+</li>
+<li>
+<p><strong><code>tipo</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM('credito', 'contado', 'recibo')</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Tipo de la factura (crédito, contado, recibo).</p>
+</li>
+<li>
+<p><strong><code>numeracion</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Único: Sí.</li>
+<li>
+<p>Descripción: Número de la factura. Debe ser único en el sistema.</p>
+</li>
+<li>
+<p><strong><code>estado</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM('pendiente', 'pagada', 'anulada')</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Estado de la factura (pendiente, pagada, anulada).</p>
+</li>
+<li>
+<p><strong><code>fechaPago</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>DATEONLY</code></p>
+</li>
+<li>
+<p>Descripción: Fecha en la que se realizó el pago de la factura. Es opcional.</p>
+</li>
+<li>
+<p><strong><code>monto</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>FLOAT</code></p>
+</li>
+<li>
+<p>Descripción: Monto total de la factura.</p>
+</li>
+<li>
+<p><strong><code>descripcion</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>
+<p>Descripción: Descripción adicional sobre la factura.</p>
+</li>
+<li>
+<p><strong><code>particularId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Identificador del cliente particular asociado a la factura. Referencia al modelo <code>Particulares</code>.</p>
+</li>
+<li>
+<p><strong><code>empresaId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador de la empresa asociada a la factura. Referencia al modelo <code>Empresas</code>.</li>
+</ul>
+<h3 id="relaciones_6">Relaciones<a class="headerlink" href="#relaciones_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Particulares</code></strong>: 1 a N (Uno a Muchos)</li>
+<li><strong>Relación con <code>Empresas</code></strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+<h2 id="modelo-historicousocamion">Modelo: <code>HistoricoUsoCamion</code><a class="headerlink" href="#modelo-historicousocamion" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_7">Descripción<a class="headerlink" href="#descripcion_7" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>HistoricoUsoCamion</code> registra el historial de uso de camiones por parte de empleados. Incluye información sobre el empleado, el camión, y las fechas de inicio y fin del uso del camión.</p>
+<h3 id="campos_7">Campos<a class="headerlink" href="#campos_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del registro en la tabla <code>HistoricoUsoCamion</code>.</p>
+</li>
+<li>
+<p><strong><code>empleadoId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Identificador del empleado que utilizó el camión. Referencia al modelo <code>Empleados</code>.</p>
+</li>
+<li>
+<p><strong><code>camionId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Identificador del camión que fue utilizado. Referencia al modelo <code>Camiones</code>.</p>
+</li>
+<li>
+<p><strong><code>fechaInicio</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>DATE</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Fecha de inicio del uso del camión.</p>
+</li>
+<li>
+<p><strong><code>fechaFin</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>DATE</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Fecha de finalización del uso del camión. Es opcional si el camión aún está en uso.</li>
+</ul>
+<h3 id="relaciones_7">Relaciones<a class="headerlink" href="#relaciones_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Empleados</code></strong>: N a 1 (Muchos a Uno)</li>
+<li><strong>Relación con <code>Camiones</code></strong>: N a 1 (Muchos a Uno)</li>
+</ul>
+<h2 id="modelo-jornales">Modelo: <code>Jornales</code><a class="headerlink" href="#modelo-jornales" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_8">Descripción<a class="headerlink" href="#descripcion_8" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Jornales</code> registra los detalles de los turnos de trabajo de los empleados, incluyendo las horas de entrada y salida, y el cálculo de horas extra. También incluye información sobre el tipo de jornal y quién lo creó.</p>
+<h3 id="campos_8">Campos<a class="headerlink" href="#campos_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del registro en la tabla <code>Jornales</code>.</p>
+</li>
+<li>
+<p><strong><code>empleadoId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Identificador del empleado al que corresponde el jornal. Referencia al modelo <code>Empleados</code>.</p>
+</li>
+<li>
+<p><strong><code>tipo</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM</code></p>
+</li>
+<li>Valores posibles: <code>'trabajo'</code>, <code>'licencia'</code>, <code>'enfermedad'</code>, <code>'falta'</code></li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Tipo de jornal registrado.</p>
+</li>
+<li>
+<p><strong><code>fecha</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>DATEONLY</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Fecha del jornal.</p>
+</li>
+<li>
+<p><strong><code>entrada</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>TIME</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Hora de entrada del empleado.</p>
+</li>
+<li>
+<p><strong><code>salida</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>TIME</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Hora de salida del empleado.</p>
+</li>
+<li>
+<p><strong><code>horasExtra</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>FLOAT</code></p>
+</li>
+<li>Valor por defecto: <code>0</code></li>
+<li>
+<p>Descripción: Horas extra calculadas, basadas en el límite de horas diarias.</p>
+</li>
+<li>
+<p><strong><code>creadoPor</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>Descripción: Identificador del usuario que creó el registro del jornal. Referencia al modelo <code>Usuarios</code>.</li>
+</ul>
+<h3 id="relaciones_8">Relaciones<a class="headerlink" href="#relaciones_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Empleados</code></strong>: N a 1 (Muchos a Uno)</li>
+<li><strong>Relación con <code>Usuarios</code></strong>: N a 1 (Muchos a Uno)</li>
+</ul>
+<h2 id="modelo-movimientos">Modelo: <code>Movimientos</code><a class="headerlink" href="#modelo-movimientos" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_9">Descripción<a class="headerlink" href="#descripcion_9" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Movimientos</code> registra los movimientos de las volquetas asociados a pedidos. Incluye información sobre el número de volqueta, el pedido asociado, el horario del movimiento, el tipo de movimiento y el chofer responsable.</p>
+<h3 id="campos_9">Campos<a class="headerlink" href="#campos_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del registro en la tabla <code>Movimientos</code>.</p>
+</li>
+<li>
+<p><strong><code>numeroVolqueta</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Número de la volqueta asociada al movimiento. Referencia al campo <code>numeroVolqueta</code> del modelo <code>Volquetas</code>.</p>
+</li>
+<li>
+<p><strong><code>pedidoId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Identificador del pedido asociado al movimiento. Referencia al campo <code>id</code> del modelo <code>Pedidos</code>.</p>
+</li>
+<li>
+<p><strong><code>horario</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>DATE</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Fecha y hora del movimiento.</p>
+</li>
+<li>
+<p><strong><code>tipo</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM</code></p>
+</li>
+<li>Valores posibles: <code>'entrega'</code>, <code>'levante'</code></li>
+<li>
+<p>Descripción: Tipo de movimiento registrado.</p>
+</li>
+<li>
+<p><strong><code>choferId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador del chofer responsable del movimiento. Referencia al campo <code>id</code> del modelo <code>Empleados</code>.</li>
+</ul>
+<h3 id="relaciones_9">Relaciones<a class="headerlink" href="#relaciones_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Volquetas</code></strong>: N a 1 (Muchos a Uno)</li>
+<li><strong>Relación con <code>Pedidos</code></strong>: N a 1 (Muchos a Uno)</li>
+<li><strong>Relación con <code>Empleados</code></strong>: N a 1 (Muchos a Uno)</li>
+</ul>
+<h2 id="modelo-obras">Modelo: <code>Obras</code><a class="headerlink" href="#modelo-obras" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_10">Descripción<a class="headerlink" href="#descripcion_10" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Obras</code> representa una obra con detalles como la ubicación, descripción y estado activo. Puede estar asociada tanto a una empresa como a un particular.</p>
+<h3 id="campos_10">Campos<a class="headerlink" href="#campos_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del registro en la tabla <code>Obras</code>.</p>
+</li>
+<li>
+<p><strong><code>calle</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Nombre de la calle donde se encuentra la obra.</p>
+</li>
+<li>
+<p><strong><code>esquina</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Esquina o cruce relevante para la ubicación de la obra.</p>
+</li>
+<li>
+<p><strong><code>barrio</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Barrio donde se encuentra la obra.</p>
+</li>
+<li>
+<p><strong><code>coordenadas</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Coordenadas geográficas de la ubicación de la obra.</p>
+</li>
+<li>
+<p><strong><code>numeroPuerta</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Número de puerta asociado a la obra.</p>
+</li>
+<li>
+<p><strong><code>descripcion</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Descripción detallada de la obra.</p>
+</li>
+<li>
+<p><strong><code>activa</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>BOOLEAN</code></p>
+</li>
+<li>Valor por defecto: <code>true</code></li>
+<li>
+<p>Descripción: Indica si la obra está activa.</p>
+</li>
+<li>
+<p><strong><code>particularId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Identificador del particular asociado a la obra. Referencia al campo <code>id</code> del modelo <code>Particulares</code>.</p>
+</li>
+<li>
+<p><strong><code>empresaId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador de la empresa asociada a la obra. Referencia al campo <code>id</code> del modelo <code>Empresas</code>.</li>
+</ul>
+<h3 id="relaciones_10">Relaciones<a class="headerlink" href="#relaciones_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Particulares</code></strong>: N a 1 (Muchos a Uno)</li>
+<li><strong>Relación con <code>Empresas</code></strong>: N a 1 (Muchos a Uno)</li>
+</ul>
+<h2 id="modelo-obradetalles">Modelo: <code>ObraDetalles</code><a class="headerlink" href="#modelo-obradetalles" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_11">Descripción<a class="headerlink" href="#descripcion_11" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>ObraDetalles</code> almacena información detallada sobre el manejo de residuos en una obra específica. Incluye datos sobre el tipo de residuos, su destino final, y la frecuencia de recolección.</p>
+<h3 id="campos_11">Campos<a class="headerlink" href="#campos_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del registro en la tabla <code>ObraDetalles</code>.</p>
+</li>
+<li>
+<p><strong><code>detalleResiduos</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Descripción de los residuos gestionados en la obra.</p>
+</li>
+<li>
+<p><strong><code>residuosMezclados</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>BOOLEAN</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Indica si los residuos están mezclados.</p>
+</li>
+<li>
+<p><strong><code>residuosReciclados</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>BOOLEAN</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Indica si los residuos están reciclados.</p>
+</li>
+<li>
+<p><strong><code>frecuenciaSemanal</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>RANGE(DataTypes.INTEGER)</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Rango de frecuencia semanal para la recolección de residuos.</p>
+</li>
+<li>
+<p><strong><code>destinoFinal</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Destino final de los residuos.</p>
+</li>
+<li>
+<p><strong><code>dias</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Días de la semana en los que se realiza la recolección.</p>
+</li>
+<li>
+<p><strong><code>obraId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>Descripción: Identificador de la obra asociada. Referencia al campo <code>id</code> del modelo <code>Obras</code>.</li>
+</ul>
+<h3 id="relaciones_11">Relaciones<a class="headerlink" href="#relaciones_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Obras</code></strong>: 1 a 1 (Uno a Uno)</li>
+</ul>
+<h2 id="modelo-pagopedidos">Modelo: <code>PagoPedidos</code><a class="headerlink" href="#modelo-pagopedidos" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_12">Descripción<a class="headerlink" href="#descripcion_12" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>PagoPedidos</code> representa el pago asociado a un pedido, con detalles como el precio, el estado de pago, el remito y el tipo de pago.</p>
+<h3 id="campos_12">Campos<a class="headerlink" href="#campos_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del registro en la tabla <code>PagoPedidos</code>.</p>
+</li>
+<li>
+<p><strong><code>precio</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>FLOAT</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Monto del pago.</p>
+</li>
+<li>
+<p><strong><code>pagado</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>BOOLEAN</code></p>
+</li>
+<li>Valor por defecto: <code>false</code></li>
+<li>
+<p>Descripción: Indica si el pago ha sido realizado o no.</p>
+</li>
+<li>
+<p><strong><code>remito</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Número de remito asociado al pago.</p>
+</li>
+<li>
+<p><strong><code>tipoPago</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM('transferencia', 'efectivo', 'cheque')</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Tipo de pago utilizado.</p>
+</li>
+<li>
+<p><strong><code>facturaId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador de la factura asociada al pago. Referencia al campo <code>id</code> del modelo <code>Facturas</code>.</li>
+</ul>
+<h3 id="relaciones_12">Relaciones<a class="headerlink" href="#relaciones_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Facturas</code></strong>: N a 1 (Muchos a Uno)</li>
+</ul>
+<h2 id="modelo-pagopedidos_1">Modelo: <code>PagoPedidos</code><a class="headerlink" href="#modelo-pagopedidos_1" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_13">Descripción<a class="headerlink" href="#descripcion_13" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>PagoPedidos</code> representa el pago asociado a un pedido, con detalles como el precio, el estado de pago, el remito y el tipo de pago.</p>
+<h3 id="campos_13">Campos<a class="headerlink" href="#campos_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del registro en la tabla <code>PagoPedidos</code>.</p>
+</li>
+<li>
+<p><strong><code>precio</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>FLOAT</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Monto del pago.</p>
+</li>
+<li>
+<p><strong><code>pagado</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>BOOLEAN</code></p>
+</li>
+<li>Valor por defecto: <code>false</code></li>
+<li>
+<p>Descripción: Indica si el pago ha sido realizado o no.</p>
+</li>
+<li>
+<p><strong><code>remito</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Número de remito asociado al pago.</p>
+</li>
+<li>
+<p><strong><code>tipoPago</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM('transferencia', 'efectivo', 'cheque')</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Tipo de pago utilizado.</p>
+</li>
+<li>
+<p><strong><code>facturaId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador de la factura asociada al pago. Referencia al campo <code>id</code> del modelo <code>Facturas</code>.</li>
+</ul>
+<h3 id="relaciones_13">Relaciones<a class="headerlink" href="#relaciones_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Facturas</code></strong>: N a 1 (Muchos a Uno)</li>
+<li><strong>Relación con <code>Pedidos</code></strong>: 1 a 1 (Uno a Uno)</li>
+</ul>
+<h2 id="modelo-particulares">Modelo: <code>Particulares</code><a class="headerlink" href="#modelo-particulares" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_14">Descripción<a class="headerlink" href="#descripcion_14" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Particulares</code> representa a un cliente individual, con detalles como nombre, cédula, correo electrónico y una descripción adicional.</p>
+<h3 id="campos_14">Campos<a class="headerlink" href="#campos_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del registro en la tabla <code>Particulares</code>.</p>
+</li>
+<li>
+<p><strong><code>nombre</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Nombre del cliente.</p>
+</li>
+<li>
+<p><strong><code>cedula</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING(8)</code></p>
+</li>
+<li>Único.</li>
+<li>
+<p>Descripción: Cédula del cliente. Debe ser única en la base de datos.</p>
+</li>
+<li>
+<p><strong><code>email</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Descripción: Correo electrónico del cliente.</li>
+<li>
+<p>Validación: Debe ser una dirección de correo electrónico válida.</p>
+</li>
+<li>
+<p><strong><code>descripcion</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Descripción: Descripción adicional sobre el cliente.</li>
+</ul>
+<h3 id="relaciones_14">Relaciones<a class="headerlink" href="#relaciones_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Obras</code></strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+<h2 id="modelo-pedidos">Modelo: <code>Pedidos</code><a class="headerlink" href="#modelo-pedidos" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_15">Descripción<a class="headerlink" href="#descripcion_15" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Pedidos</code> representa los pedidos realizados en el sistema, con información sobre su estado, la obra asociada, el usuario que lo creó y otros detalles relevantes.</p>
+<h3 id="campos_15">Campos<a class="headerlink" href="#campos_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental y clave primaria.</li>
+<li>
+<p>Descripción: Identificador único del pedido.</p>
+</li>
+<li>
+<p><strong><code>creadoPor</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>Descripción: Identificador del usuario que creó el pedido.</li>
+<li>
+<p>Referencia: Relacionado con el modelo <code>Usuarios</code>.</p>
+</li>
+<li>
+<p><strong><code>obraId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>Descripción: Identificador de la obra asociada al pedido.</li>
+<li>
+<p>Referencia: Relacionado con el modelo <code>Obras</code>.</p>
+</li>
+<li>
+<p><strong><code>descripcion</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Descripción: Descripción adicional del pedido.</li>
+<li>
+<p>Permite valores nulos.</p>
+</li>
+<li>
+<p><strong><code>estado</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM</code></p>
+</li>
+<li>Valores posibles: <code>'iniciado'</code>, <code>'entregado'</code>, <code>'levantado'</code>, <code>'cancelado'</code>.</li>
+<li>Valor por defecto: <code>'iniciado'</code>.</li>
+<li>
+<p>Descripción: Estado actual del pedido.</p>
+</li>
+<li>
+<p><strong><code>creadoComo</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM</code></p>
+</li>
+<li>Valores posibles: <code>'nuevo'</code>, <code>'recambio'</code>, <code>'multiple'</code>, <code>'entrega mas levante'</code>.</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Tipo de pedido creado.</p>
+</li>
+<li>
+<p><strong><code>permisoId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador del permiso asociado al pedido.</li>
+<li>
+<p>Referencia: Relacionado con el modelo <code>Permisos</code>.</p>
+</li>
+<li>
+<p><strong><code>nroPesada</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Número de pesada asociado al pedido.</p>
+</li>
+<li>
+<p><strong><code>pagoPedidoId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador del pago asociado al pedido.</li>
+<li>
+<p>Referencia: Relacionado con el modelo <code>PagoPedidos</code>.</p>
+</li>
+<li>
+<p><strong><code>referenciaId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador del pedido de referencia (en caso de ser un pedido relacionado con otro).</li>
+<li>Referencia: Relacionado con el modelo <code>Pedidos</code>.</li>
+</ul>
+<h3 id="relaciones_15">Relaciones<a class="headerlink" href="#relaciones_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Usuarios</code></strong>: 1 a N (Uno a Muchos)</li>
+<li><strong>Relación con <code>Obras</code></strong>: 1 a N (Uno a Muchos)</li>
+<li><strong>Relación con <code>Permisos</code></strong>: N a 1 (Muchos a Uno)</li>
+<li><strong>Relación con <code>PagoPedidos</code></strong>: 1 a 1 (Uno a Uno)</li>
+<li><strong>Relación con <code>Pedidos</code></strong>: 1 a N (Uno a Muchos, auto-referencia)</li>
+<li><strong>Relación con <code>Movimientos</code></strong>: 1 a 2 (Uno a Dos)</li>
+<li><strong>Relación con <code>Sugerencias</code></strong>: 1 a 2 (Uno a Dos)</li>
+</ul>
+<h2 id="modelo-permisos">Modelo: <code>Permisos</code><a class="headerlink" href="#modelo-permisos" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_16">Descripción<a class="headerlink" href="#descripcion_16" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Permisos</code> representa los permisos asociados a las empresas o particulares, con información sobre su fecha de creación y vencimiento.</p>
+<h3 id="campos_16">Campos<a class="headerlink" href="#campos_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>Único: Sí</li>
+<li>
+<p>Descripción: Número único del permiso.</p>
+</li>
+<li>
+<p><strong><code>fechaCreacion</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>DATEONLY</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Fecha en que se creó el permiso.</p>
+</li>
+<li>
+<p><strong><code>fechaVencimiento</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>DATEONLY</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Fecha en que vence el permiso.</p>
+</li>
+<li>
+<p><strong><code>empresaId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador de la empresa asociada al permiso.</li>
+<li>
+<p>Referencia: Relacionado con el modelo <code>Empresas</code>.</p>
+</li>
+<li>
+<p><strong><code>particularId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador del particular asociado al permiso.</li>
+<li>Referencia: Relacionado con el modelo <code>Particulares</code>.</li>
+</ul>
+<h3 id="relaciones_16">Relaciones<a class="headerlink" href="#relaciones_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Empresas</code></strong>: N a 1 (Muchos a Uno)</li>
+<li><strong>Relación con <code>Particulares</code></strong>: N a 1 (Muchos a Uno)</li>
+</ul>
+<h2 id="modelo-servicios">Modelo: <code>Servicios</code><a class="headerlink" href="#modelo-servicios" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_17">Descripción<a class="headerlink" href="#descripcion_17" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Servicios</code> representa los diferentes tipos de servicios realizados a los camiones, incluyendo información sobre el tipo de servicio, la fecha, el precio, y la moneda.</p>
+<h3 id="campos_17">Campos<a class="headerlink" href="#campos_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental: Sí</li>
+<li>Clave primaria: Sí</li>
+<li>
+<p>Descripción: Identificador único del servicio.</p>
+</li>
+<li>
+<p><strong><code>camionId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>Descripción: Identificador del camión al que se le realizó el servicio.</li>
+<li>
+<p>Referencia: Relacionado con el modelo <code>Camiones</code>.</p>
+</li>
+<li>
+<p><strong><code>fecha</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>DATE</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Fecha en que se realizó el servicio.</p>
+</li>
+<li>
+<p><strong><code>tipo</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM('arreglo', 'service', 'chequeo', 'pintura')</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Tipo de servicio realizado.</p>
+</li>
+<li>
+<p><strong><code>precio</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>FLOAT</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Costo del servicio.</p>
+</li>
+<li>
+<p><strong><code>moneda</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM('peso', 'dolar')</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Moneda en la que se pagó el servicio.</p>
+</li>
+<li>
+<p><strong><code>descripcion</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Descripción detallada del servicio.</li>
+</ul>
+<h3 id="relaciones_17">Relaciones<a class="headerlink" href="#relaciones_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Camiones</code></strong>: N a 1 (Muchos a Uno)</li>
+</ul>
+<h2 id="modelo-sugerencias">Modelo: <code>Sugerencias</code><a class="headerlink" href="#modelo-sugerencias" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_18">Descripción<a class="headerlink" href="#descripcion_18" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Sugerencias</code> representa las sugerencias asociadas a pedidos, incluyendo el horario sugerido, el chofer recomendado y el tipo de sugerencia (entrega o levante).</p>
+<h3 id="campos_18">Campos<a class="headerlink" href="#campos_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental: Sí</li>
+<li>Clave primaria: Sí</li>
+<li>
+<p>Descripción: Identificador único de la sugerencia.</p>
+</li>
+<li>
+<p><strong><code>horarioSugerido</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>DATE</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Horario sugerido para la acción recomendada.</p>
+</li>
+<li>
+<p><strong><code>choferSugeridoId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador del chofer recomendado para el pedido.</li>
+<li>
+<p>Referencia: Relacionado con el modelo <code>Empleados</code>.</p>
+</li>
+<li>
+<p><strong><code>tipoSugerido</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM('entrega', 'levante')</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Tipo de acción sugerida (entrega o levante).</p>
+</li>
+<li>
+<p><strong><code>pedidoId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>Descripción: Identificador del pedido asociado a la sugerencia.</li>
+<li>Referencia: Relacionado con el modelo <code>Pedidos</code>.</li>
+</ul>
+<h3 id="relaciones_18">Relaciones<a class="headerlink" href="#relaciones_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Empleados</code></strong>: N a 1 (Muchos a Uno)</li>
+<li><strong>Relación con <code>Pedidos</code></strong>: N a 1 (Muchos a Uno)</li>
+</ul>
+<h2 id="modelo-telefonos">Modelo: <code>Telefonos</code><a class="headerlink" href="#modelo-telefonos" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_19">Descripción<a class="headerlink" href="#descripcion_19" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Telefonos</code> representa la información de contacto telefónico, que puede estar asociada a empleados, particulares, o contactos de empresas.</p>
+<h3 id="campos_19">Campos<a class="headerlink" href="#campos_19" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental: Sí</li>
+<li>Clave primaria: Sí</li>
+<li>
+<p>Descripción: Identificador único del teléfono.</p>
+</li>
+<li>
+<p><strong><code>telefono</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>Único: Sí</li>
+<li>
+<p>Descripción: Número de teléfono.</p>
+</li>
+<li>
+<p><strong><code>extension</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>
+<p>Descripción: Extensión telefónica (opcional).</p>
+</li>
+<li>
+<p><strong><code>tipo</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM('telefono', 'celular')</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Tipo de teléfono (teléfono fijo o celular).</p>
+</li>
+<li>
+<p><strong><code>empleadoId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador del empleado asociado al teléfono.</li>
+<li>
+<p>Referencia: Relacionado con el modelo <code>Empleados</code>.</p>
+</li>
+<li>
+<p><strong><code>particularId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador del particular asociado al teléfono.</li>
+<li>
+<p>Referencia: Relacionado con el modelo <code>Particulares</code>.</p>
+</li>
+<li>
+<p><strong><code>contactoEmpresaId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Permite valores nulos.</li>
+<li>Descripción: Identificador del contacto de la empresa asociado al teléfono.</li>
+<li>Referencia: Relacionado con el modelo <code>ContactoEmpresas</code>.</li>
+</ul>
+<h3 id="relaciones_19">Relaciones<a class="headerlink" href="#relaciones_19" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Empleados</code></strong>: N a 1 (Muchos a Uno)</li>
+<li><strong>Relación con <code>Particulares</code></strong>: N a 1 (Muchos a Uno)</li>
+<li><strong>Relación con <code>ContactoEmpresas</code></strong>: N a 1 (Muchos a Uno)</li>
+</ul>
+<h2 id="modelo-usuarios">Modelo: <code>Usuarios</code><a class="headerlink" href="#modelo-usuarios" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_20">Descripción<a class="headerlink" href="#descripcion_20" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Usuarios</code> representa los usuarios del sistema, que están asociados a empleados y tienen roles específicos.</p>
+<h3 id="campos_20">Campos<a class="headerlink" href="#campos_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>id</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Auto-incremental: Sí</li>
+<li>Clave primaria: Sí</li>
+<li>
+<p>Descripción: Identificador único del usuario.</p>
+</li>
+<li>
+<p><strong><code>empleadoId</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>Descripción: Identificador del empleado asociado al usuario.</li>
+<li>
+<p>Referencia: Relacionado con el modelo <code>Empleados</code>.</p>
+</li>
+<li>
+<p><strong><code>rol</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM('admin', 'normal')</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Rol del usuario en el sistema (administrador o usuario normal).</p>
+</li>
+<li>
+<p><strong><code>email</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Validación: Debe ser una dirección de correo electrónico válida.</li>
+<li>Único: Sí</li>
+<li>
+<p>Descripción: Correo electrónico del usuario.</p>
+</li>
+<li>
+<p><strong><code>password</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>Único: Sí</li>
+<li>
+<p>Descripción: Contraseña del usuario.</p>
+</li>
+<li>
+<p><strong><code>activo</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>BOOLEAN</code></p>
+</li>
+<li>Valor por defecto: <code>false</code></li>
+<li>Descripción: Estado del usuario (activo o inactivo).</li>
+</ul>
+<h3 id="relaciones_20">Relaciones<a class="headerlink" href="#relaciones_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Empleados</code></strong>: N a 1 (Muchos a Uno)</li>
+</ul>
+<h2 id="modelo-volquetas">Modelo: <code>Volquetas</code><a class="headerlink" href="#modelo-volquetas" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion_21">Descripción<a class="headerlink" href="#descripcion_21" title="Permanent link">&para;</a></h3>
+<p>El modelo <code>Volquetas</code> representa las volquetas utilizadas en la empresa para el manejo de residuos. Contiene información sobre el estado, tipo y ubicación de las volquetas.</p>
+<h3 id="campos_21">Campos<a class="headerlink" href="#campos_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>numeroVolqueta</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>INTEGER</code></p>
+</li>
+<li>Clave primaria: Sí</li>
+<li>
+<p>Descripción: Número único que identifica a la volqueta.</p>
+</li>
+<li>
+<p><strong><code>estado</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM('ok', 'quemada', 'para pintar', 'perdida', 'inutilizable')</code></p>
+</li>
+<li>Permite valores nulos: Sí</li>
+<li>
+<p>Descripción: Estado actual de la volqueta. Puede ser 'ok', 'quemada', 'para pintar', 'perdida' o 'inutilizable'.</p>
+</li>
+<li>
+<p><strong><code>tipo</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>ENUM('grande', 'chica')</code></p>
+</li>
+<li>No permite valores nulos.</li>
+<li>
+<p>Descripción: Tipo de la volqueta, puede ser 'grande' o 'chica'.</p>
+</li>
+<li>
+<p><strong><code>ocupada</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>BOOLEAN</code></p>
+</li>
+<li>Valor por defecto: <code>false</code></li>
+<li>
+<p>Descripción: Indica si la volqueta está ocupada (sí o no).</p>
+</li>
+<li>
+<p><strong><code>ubicacionTemporal</code></strong>:</p>
+</li>
+<li>
+<p>Tipo: <code>STRING</code></p>
+</li>
+<li>Descripción: Ubicación temporal de la volqueta.</li>
+</ul>
+<h3 id="relaciones_21">Relaciones<a class="headerlink" href="#relaciones_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Relación con <code>Movimientos</code></strong>: 1 a N (Uno a Muchos)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../documentacion-backend-metodos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Documentación de los Métodos HTTP del Proyecto">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Documentación de los Métodos HTTP del Proyecto
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../Metodos-HTTP/cajas/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Cajas">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Cajas
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.footer", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>

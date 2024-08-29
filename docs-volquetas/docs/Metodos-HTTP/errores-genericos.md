@@ -1,3 +1,7 @@
+---
+hide:
+    - toc
+---
 ### Errores
 
 #### Error 400 - Bad Request
