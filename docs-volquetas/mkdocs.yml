@@ -3,29 +3,29 @@ site_description: Documentacion para proyecto de volquetas
 site_author: Gianluca Cavajani
 
 theme:
-  name: material
-  language: es
-  features:
-    - navigation.top
-    - navigation.footer
-    - content.code.copy
+    name: material
+    language: es
+    features:
+        - navigation.top
+        - navigation.footer
+        - content.code.copy
 
-  palette:
-    - scheme: default
-      primary: black
-      toggle:
-        icon: material/brightness-7
-    - scheme: slate
-      primary: indigo
-      toggle:
-        icon: material/brightness-4
+    palette:
+        - scheme: default
+          primary: black
+          toggle:
+              icon: material/brightness-7
+        - scheme: slate
+          primary: indigo
+          toggle:
+              icon: material/brightness-4
 
 markdown_extensions:
-  - toc:
-      permalink: true
-  - tables
-  - admonition
+    - toc:
+          permalink: true
+    - tables
+    - admonition
 
 plugins:
-  - search
-  - awesome-pages
+    - search
+    - awesome-pages
