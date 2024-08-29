@@ -13,21 +13,25 @@
       
       
       
+        <link rel="prev" href="../01-Crear-Instancias/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../03-Configurar-IPs-Elasticas/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>Documentacion Volquetas</title>
+        <title>02 Configurar Security Rules - Documentacion Volquetas</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#crear-nuevo-grupo-de-seguridad" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="/." title="Documentacion Volquetas" class="md-header__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
+    <a href="../.." title="Documentacion Volquetas" class="md-header__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -103,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              02 Configurar Security Rules
             
           </span>
         </div>
@@ -204,7 +213,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Documentacion Volquetas" class="md-nav__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
+    <a href="../.." title="Documentacion Volquetas" class="md-nav__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -222,7 +231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -239,17 +248,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -263,7 +274,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Manual De Deploy
@@ -277,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/00-Introduccion/" class="md-nav__link">
+      <a href="../00-Introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -298,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/01-Crear-Instancias/" class="md-nav__link">
+      <a href="../01-Crear-Instancias/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -316,10 +327,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/02-Configurar-Security-Rules/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    02 Configurar Security Rules
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -328,6 +357,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#crear-nuevo-grupo-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear nuevo Grupo de Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear nuevo Grupo de Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vincular-grupo-de-seguridad-a-la-instancia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vincular grupo de seguridad a la instancia
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -340,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/03-Configurar-IPs-Elasticas/" class="md-nav__link">
+      <a href="../03-Configurar-IPs-Elasticas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -361,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/04-Configurar-Putty/" class="md-nav__link">
+      <a href="../04-Configurar-Putty/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/05-Comprar-y-Configurar-Dominios/" class="md-nav__link">
+      <a href="../05-Comprar-y-Configurar-Dominios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -403,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/06-Configuracion-inicial-del-servidor/" class="md-nav__link">
+      <a href="../06-Configuracion-inicial-del-servidor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -424,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/07-Configurar-NGINX/" class="md-nav__link">
+      <a href="../07-Configurar-NGINX/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -445,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/08-Deploy-Build-React/" class="md-nav__link">
+      <a href="../08-Deploy-Build-React/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -466,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/09-Configurar-Instancia-de-Base-de-datos/" class="md-nav__link">
+      <a href="../09-Configurar-Instancia-de-Base-de-datos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/10-Deploy-Backend/" class="md-nav__link">
+      <a href="../10-Deploy-Backend/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/11-Configurar-Certificados/" class="md-nav__link">
+      <a href="../11-Configurar-Certificados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -564,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/old/documentacion-backend-metodos/" class="md-nav__link">
+      <a href="../old/documentacion-backend-metodos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/old/documentacion-backend-modelos/" class="md-nav__link">
+      <a href="../old/documentacion-backend-modelos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -656,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/cajas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/cajas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -677,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/camiones/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/camiones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -698,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/config/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -719,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/contacto-empresas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/contacto-empresas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/doc2/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/doc2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/empleados/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/empleados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -782,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/empresas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/empresas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -803,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/errores-genericos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/errores-genericos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -824,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/facturas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/facturas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -845,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/historico-uso-camion/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/historico-uso-camion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -866,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/jornales/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/jornales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -887,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/movimientos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/movimientos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -908,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/obra-detalles/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/obra-detalles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -929,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/obras/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/obras/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -950,7 +1021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/pago-pedidos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/pago-pedidos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/particulares/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/particulares/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +1063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/pedidos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/pedidos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1013,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/permisos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/permisos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1034,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/servicios/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/servicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1055,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/sugerencias/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/sugerencias/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1076,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/telefonos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/telefonos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/usuarios/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/usuarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1118,7 +1189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/volquetas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/volquetas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/cajas/" class="md-nav__link">
+      <a href="../../Modelos/cajas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/camiones/" class="md-nav__link">
+      <a href="../../Modelos/camiones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/config/" class="md-nav__link">
+      <a href="../../Modelos/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1244,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/contacto-empresas/" class="md-nav__link">
+      <a href="../../Modelos/contacto-empresas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,7 +1336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/empleados/" class="md-nav__link">
+      <a href="../../Modelos/empleados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1286,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/empresas/" class="md-nav__link">
+      <a href="../../Modelos/empresas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1307,7 +1378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/facturas/" class="md-nav__link">
+      <a href="../../Modelos/facturas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1328,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/historico-uso-camion/" class="md-nav__link">
+      <a href="../../Modelos/historico-uso-camion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1349,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/jornales/" class="md-nav__link">
+      <a href="../../Modelos/jornales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1370,7 +1441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/movimientos/" class="md-nav__link">
+      <a href="../../Modelos/movimientos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1391,7 +1462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/obra-detalles/" class="md-nav__link">
+      <a href="../../Modelos/obra-detalles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1412,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/obras/" class="md-nav__link">
+      <a href="../../Modelos/obras/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/pago-pedidos/" class="md-nav__link">
+      <a href="../../Modelos/pago-pedidos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1454,7 +1525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/particulares/" class="md-nav__link">
+      <a href="../../Modelos/particulares/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1475,7 +1546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/pedidos/" class="md-nav__link">
+      <a href="../../Modelos/pedidos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1496,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/permisos/" class="md-nav__link">
+      <a href="../../Modelos/permisos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1517,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/servicios/" class="md-nav__link">
+      <a href="../../Modelos/servicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1538,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/sugerencias/" class="md-nav__link">
+      <a href="../../Modelos/sugerencias/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1559,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/telefonos/" class="md-nav__link">
+      <a href="../../Modelos/telefonos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1580,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/usuarios/" class="md-nav__link">
+      <a href="../../Modelos/usuarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1601,7 +1672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/volquetas/" class="md-nav__link">
+      <a href="../../Modelos/volquetas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1640,6 +1711,38 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#crear-nuevo-grupo-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear nuevo Grupo de Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear nuevo Grupo de Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vincular-grupo-de-seguridad-a-la-instancia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vincular grupo de seguridad a la instancia
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1650,8 +1753,62 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  <h1>02 Configurar Security Rules</h1>
+
+<p>Pasaremos a demostrar como crear Security Rules para las distintas instancias.</p>
+<h2 id="crear-nuevo-grupo-de-seguridad">Crear nuevo Grupo de Seguridad<a class="headerlink" href="#crear-nuevo-grupo-de-seguridad" title="Permanent link">&para;</a></h2>
+<p>En el panel de instancia podemos ver los detalles de los grupos de seguridad configurados para esa instancia. Esta instancia ya tiene un Grupo de seguridad configurado con muchas reglas de entrada/salida, a continuación demostraremos como asignar estas reglas y su razon.<img alt="Pasted image 20240826195809.png" src="../Configurar%20Security%20Rules/34ee618e61bbec420739a50e1ad70c31bc75b875.png" title="wikilink" /></p>
+<ol>
+<li>En la imagen de arriba se puede observar un panel a la izquierda donde dice "Red y seguridad" y debajo "Security Groups" allí es donde deberemos clickear para configurar las reglas de entrada. Tambien debemos recordar la IPV4 publica ya que la estaremos usando para validar los cambios. Para la demostración de funcionamiento de este manual, luego de tomar la captura desvincule el grupo de seguridad de la IP.
+    En este caso: 18.208.241.74 es una IP elástica por lo que estamos seguros al guardar y utilizar esta IP ya que no va a cambiar. Después de configurar los security groups <a href="../03-Configurar-IPs-Elasticas/">Configuraremos las IP elasticas</a>.<ul>
+<li>la URL http://18.208.241.74/api llama a un método GET que tiene devuelve una respuesta con un mensaje que viene del servidor donde nos dice en que puerto corre el entorno de desarrollo. Como se ve en la imagen de abajo esta url no es alcanzable. Esto es porque desactivamos el bypass del firewall para el puerto 80(HTTP) y el 443(HTTPS) en las reglas de entrada. A continuación demostraremos como crear un nuevo grupo para activar la conectividad.
+    <img alt="Pasted image 20240826201550.png" src="../Configurar%20Security%20Rules/e7d75ccb3db6a4d4836123ad693129f6747e8d33.png" title="wikilink" /></li>
+</ul>
+</li>
+<li>Una vez en el panel de "Grupos De Seguridad" clickeamos en "Crear grupo de seguridad". Ignorar los grupos ya creados.<img alt="Pasted image 20240826200901.png" src="../Configurar%20Security%20Rules/9d501a8c6bce5e3010ade197e306ba44b4d6494f.png" title="wikilink" /></li>
+<li>Aqui tenemos varias opciones. La primera son los "Detalles basicos". <img alt="Pasted image 20240826202722.png" src="../Configurar%20Security%20Rules/9200c180295dea339070e70f83d981fa11e2a198.png" title="wikilink" /><ul>
+<li>Elegimos un nombre descriptivo que podamos referenciar luego, y una descripcion (opcional), en la VPC elegimos la predeterminada.</li>
+</ul>
+</li>
+<li>Ahora tenemos que agregar las "Reglas de entrada", para agregar una nueva cliqueamos en "Agregar Regla".</li>
+<li>Como primera regla quiero permitir el trafico entrante por el puerto 80 el cual es el predeterminado para el protocolo HTTP.</li>
+<li>Ademas elegimos los IP permitidos para llegar al puerto HTTP, en nuestro caso permitimos todos los IP. Podemos observar que debajo de todo nos aparece un aviso de que todos los IP pueden acceder y que no es recomendado. Pero a nosotros no nos interesa ya que tenemos otro tipo de validaciones de seguridad en nuestra aplicacion.</li>
+<li>Por ultimo agregamos una descripcion (opcional) que sirve de referencia.<img alt="Pasted image 20240826203227.png" src="../Configurar%20Security%20Rules/6658c325152f8f123bf5b01f0f3588d0aa843e89.png" title="wikilink" /></li>
+<li>Siguiente a esto voy a agregar todos los puertos de entrada necesarios para mi instancia Backend.<img alt="Pasted image 20240826203616.png" src="../Configurar%20Security%20Rules/f3e604a085de0b38d4984d1ebff489477db2b5d0.png" title="wikilink" /></li>
+<li>Ahora para las reglas de salida configuraremos a donde el servidor puede llegar. Las opciones son las mismas. Asi que pasare a agregar el puerto 5432 que es el puerto de la base de datos postgresql. Ya hay una regla predefinida como PostreSQL pero si pusieramos TCP 5432 seria lo mismo(a modo informativo lo muestro en la imagen pero luego lo voy a borrar y solo voy a dejar uno).<img alt="Pasted image 20240826203902.png" src="../Configurar%20Security%20Rules/389c331fecedb61113a65b8ddb3a6a5489b1e446.png" title="wikilink" /></li>
+<li>Por ultimo agregariamos Etiquetas es opcional pero lo voy a hacer porque son utiles para referenciar.<img alt="Pasted image 20240826204117.png" src="../Configurar%20Security%20Rules/42ef95092a6d15556bbfd21c15f2cd5254f030c8.png" title="wikilink" /></li>
+<li>Cliqueamos en "Crear grupo de seguridad" y nos deberia mostrar una pantalla como la siguiente:<img alt="Pasted image 20240826204211.png" src="../Configurar%20Security%20Rules/72c057e03d08ce0cb08ae20238ee0ea6e4913030.png" title="wikilink" /></li>
+</ol>
+<h3 id="vincular-grupo-de-seguridad-a-la-instancia">Vincular grupo de seguridad a la instancia<a class="headerlink" href="#vincular-grupo-de-seguridad-a-la-instancia" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Para vincular el grupo de seguridad con nuestra instancia backend nos dirigimos a la pestana de "Instancias"</li>
+<li>Seleccionamos la instancia con click derecho y paso seguido cliqueamos "Seguridad"-&gt; "Cambiar Grupos de seguridad"<img alt="Pasted image 20240826204749.png" src="../Configurar%20Security%20Rules/5d8670fcbc0d5a20190f59c16d9683ee315a98bb.png" title="wikilink" /></li>
+<li>Al cargar esta pestana podemos ver que no tenemos grupos asociados.
+    <img alt="Pasted image 20240826205018.png" src="../Configurar%20Security%20Rules/7bb332ed51728df1e59e5064cefc32612c2b2ce9.png" title="wikilink" /></li>
+<li>Para cambiar esto vamos al buscador y seleccionamos el grupo de seguridad recien creado (Manual-Deploy) y "Agregar grupo de seguridad".
+    <img alt="Pasted image 20240826205106.png" src="../Configurar%20Security%20Rules/9be88e13f93cf80c0bec8162f1a598420457c06e.png" title="wikilink" /></li>
+<li>Por ultimo clickeamos en "Guardar"</li>
+<li>Para validar los cambios vamos a la pestana de instancias nuevamente y chequeamos las reglas de entrada/salida. Como se puede observar las reglas se guardaron correctamente y quedaron asociadas a la instancia: <img alt="Pasted image 20240826205345.png" src="../Configurar%20Security%20Rules/fea38e4e9cce7f4839b0e6219e3c0c8881699eda.png" title="wikilink" /></li>
+<li>Ahora debemos validar que el puerto 80/443 sean alcanzables para ello volvemos a http://18.208.241.74/api y https://api.volquetas/api ambos puertos estan funcionando correctamente:
+    <img alt="Pasted image 20240826205528.png" src="../Configurar%20Security%20Rules/e33523479d4563393d11bc4ed3eb73f398250fa5.png" title="wikilink" />
+    <img alt="Pasted image 20240826205555.png" src="../Configurar%20Security%20Rules/942717cc6681e7f5ca9f83323dc9711711441e6e.png" title="wikilink" /></li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1669,6 +1826,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../01-Crear-Instancias/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 01 Crear Instancias">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                01 Crear Instancias
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-Configurar-IPs-Elasticas/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 03 Configurar IPs Elasticas">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                03 Configurar IPs Elasticas
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1693,10 +1888,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.top", "navigation.footer", "content.code.copy"], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

@@ -13,21 +13,25 @@
       
       
       
+        <link rel="prev" href="../00-Introduccion/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../02-Configurar-Security-Rules/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>Documentacion Volquetas</title>
+        <title>01 Crear Instancias - Documentacion Volquetas</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ingreso-a-aws-academy" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="/." title="Documentacion Volquetas" class="md-header__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
+    <a href="../.." title="Documentacion Volquetas" class="md-header__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -103,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              01 Crear Instancias
             
           </span>
         </div>
@@ -204,7 +213,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Documentacion Volquetas" class="md-nav__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
+    <a href="../.." title="Documentacion Volquetas" class="md-nav__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -222,7 +231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -239,17 +248,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -263,7 +274,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Manual De Deploy
@@ -277,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/00-Introduccion/" class="md-nav__link">
+      <a href="../00-Introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -295,10 +306,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/01-Crear-Instancias/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    01 Crear Instancias
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -307,6 +336,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ingreso-a-aws-academy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingreso a AWS Academy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-instancias-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear Instancias EC2
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -319,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/02-Configurar-Security-Rules/" class="md-nav__link">
+      <a href="../02-Configurar-Security-Rules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -340,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/03-Configurar-IPs-Elasticas/" class="md-nav__link">
+      <a href="../03-Configurar-IPs-Elasticas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -361,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/04-Configurar-Putty/" class="md-nav__link">
+      <a href="../04-Configurar-Putty/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/05-Comprar-y-Configurar-Dominios/" class="md-nav__link">
+      <a href="../05-Comprar-y-Configurar-Dominios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -403,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/06-Configuracion-inicial-del-servidor/" class="md-nav__link">
+      <a href="../06-Configuracion-inicial-del-servidor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -424,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/07-Configurar-NGINX/" class="md-nav__link">
+      <a href="../07-Configurar-NGINX/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -445,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/08-Deploy-Build-React/" class="md-nav__link">
+      <a href="../08-Deploy-Build-React/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -466,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/09-Configurar-Instancia-de-Base-de-datos/" class="md-nav__link">
+      <a href="../09-Configurar-Instancia-de-Base-de-datos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/10-Deploy-Backend/" class="md-nav__link">
+      <a href="../10-Deploy-Backend/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/11-Configurar-Certificados/" class="md-nav__link">
+      <a href="../11-Configurar-Certificados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -564,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/old/documentacion-backend-metodos/" class="md-nav__link">
+      <a href="../old/documentacion-backend-metodos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/old/documentacion-backend-modelos/" class="md-nav__link">
+      <a href="../old/documentacion-backend-modelos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -656,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/cajas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/cajas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -677,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/camiones/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/camiones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -698,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/config/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -719,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/contacto-empresas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/contacto-empresas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/doc2/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/doc2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/empleados/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/empleados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -782,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/empresas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/empresas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -803,7 +868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/errores-genericos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/errores-genericos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -824,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/facturas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/facturas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -845,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/historico-uso-camion/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/historico-uso-camion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -866,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/jornales/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/jornales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -887,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/movimientos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/movimientos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -908,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/obra-detalles/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/obra-detalles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -929,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/obras/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/obras/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -950,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/pago-pedidos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/pago-pedidos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/particulares/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/particulares/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/pedidos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/pedidos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1013,7 +1078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/permisos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/permisos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1034,7 +1099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/servicios/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/servicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1055,7 +1120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/sugerencias/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/sugerencias/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1076,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/telefonos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/telefonos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/usuarios/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/usuarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1118,7 +1183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/volquetas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/volquetas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/cajas/" class="md-nav__link">
+      <a href="../../Modelos/cajas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/camiones/" class="md-nav__link">
+      <a href="../../Modelos/camiones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/config/" class="md-nav__link">
+      <a href="../../Modelos/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1244,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/contacto-empresas/" class="md-nav__link">
+      <a href="../../Modelos/contacto-empresas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/empleados/" class="md-nav__link">
+      <a href="../../Modelos/empleados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1286,7 +1351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/empresas/" class="md-nav__link">
+      <a href="../../Modelos/empresas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1307,7 +1372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/facturas/" class="md-nav__link">
+      <a href="../../Modelos/facturas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1328,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/historico-uso-camion/" class="md-nav__link">
+      <a href="../../Modelos/historico-uso-camion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1349,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/jornales/" class="md-nav__link">
+      <a href="../../Modelos/jornales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1370,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/movimientos/" class="md-nav__link">
+      <a href="../../Modelos/movimientos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1391,7 +1456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/obra-detalles/" class="md-nav__link">
+      <a href="../../Modelos/obra-detalles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1412,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/obras/" class="md-nav__link">
+      <a href="../../Modelos/obras/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/pago-pedidos/" class="md-nav__link">
+      <a href="../../Modelos/pago-pedidos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1454,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/particulares/" class="md-nav__link">
+      <a href="../../Modelos/particulares/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1475,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/pedidos/" class="md-nav__link">
+      <a href="../../Modelos/pedidos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1496,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/permisos/" class="md-nav__link">
+      <a href="../../Modelos/permisos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1517,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/servicios/" class="md-nav__link">
+      <a href="../../Modelos/servicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1538,7 +1603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/sugerencias/" class="md-nav__link">
+      <a href="../../Modelos/sugerencias/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1559,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/telefonos/" class="md-nav__link">
+      <a href="../../Modelos/telefonos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1580,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/usuarios/" class="md-nav__link">
+      <a href="../../Modelos/usuarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1601,7 +1666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/volquetas/" class="md-nav__link">
+      <a href="../../Modelos/volquetas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1640,6 +1705,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ingreso-a-aws-academy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingreso a AWS Academy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-instancias-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear Instancias EC2
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1650,8 +1741,84 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  <h1>01 Crear Instancias</h1>
+
+<h2 id="ingreso-a-aws-academy">Ingreso a AWS Academy<a class="headerlink" href="#ingreso-a-aws-academy" title="Permanent link">&para;</a></h2>
+<p>En nuestro caso utilizaremos el AWS Learner labs con los 100USD de credito que la facultad ORT nos brinda, para configurar nuestro entorno de produccion.</p>
+<ol>
+<li>Como paso Inicial se debe ingresar a https://www.awsacademy.com/vforcesite/LMS_Login, Alli se debera seleccionar el boton de "Student Login".
+    <img alt="Pasted image 20240826175603.png" src="../Crear%20Instancias/515355b705a2eaef0bfd34063452eefbc9331364.png" title="wikilink" /></li>
+<li>Seguidamente se utilizaran las credenciales de acceso
+    <img alt="Pasted image 20240826175728.png" src="../Crear%20Instancias/b3920b3e6acb0078f832145c3fd12f5c46105d41.png" title="wikilink" /></li>
+<li>Una vez dentro se deberá ir a la sección de Courses -&gt; Modules -&gt; AWS Academy Learner Lab -&gt; Launch Academy Learner Lab</li>
+<li>Aquí cliqueamos en "Start Lab".
+    <img alt="Pasted image 20240826175515.png" src="../Crear%20Instancias/caa1475de1056f0fb22c2f0287adcae31ed853de.png" title="wikilink" /></li>
+<li>Al cliquear en "Start Lab" el icono Rojo se debería transformar a verde.
+    <img alt="Pasted image 20240826180116.png" src="../Crear%20Instancias/b41510145bed24131410e5e3c1e27f9fe1ce0edc.png" title="wikilink" /></li>
+<li>Cliqueamos en "AWS" y nos redirigirá a la pagina de AWS.</li>
+</ol>
+<h2 id="crear-instancias-ec2">Crear Instancias EC2<a class="headerlink" href="#crear-instancias-ec2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Una vez dentro de la consola de AWS. Nos dirigimos a la barra de búsqueda y buscamos "EC2", hacemos click en la misma.
+    <img alt="Pasted image 20240826180430.png" src="../Crear%20Instancias/253812068979b7e2d356e1d8db93fa7802f7ec2e.png" title="wikilink" /></li>
+<li>Cuando el Panel de EC2 cargue, seleccionamos "Lanzar la instancia", lo cual entrara en el panel de creacion de una nueva instancia.
+    <img alt="Pasted image 20240826180610.png" src="../Crear%20Instancias/83b358512c4600d6cca67c526fadc48d3717aeee.png" title="wikilink" /></li>
+</ol>
+<p>Aca tenemos varias opciones, iremos una por una para no dejar lugar a dudas o especulaciones:
+<img alt="Pasted image 20240826180726.png" src="../Crear%20Instancias/1ce49ab9b5602fa547128535f1079b76112a040f.png" title="wikilink" /></p>
+<ol>
+<li>En el lado derecho tenemos un panel de "Resumen" que de forma dinámica ira cambiando a medida que modificamos las opciones.</li>
+<li>En el lado izquierdo tenemos las opciones en si mismas.</li>
+<li>Como primera opción tenemos "Nombre y Etiquetas", esto es un nombre identificador del servidor. En mi caso le puse el nombre "Ejemplo-Deploy"
+    <img alt="Pasted image 20240826181150.png" src="../Crear%20Instancias/9cb7b7adb1f26dd8ac0bd95369890fde527d5e02.png" title="wikilink" /></li>
+<li>No seleccione tags/etiquetas ya que a mi parecer con el nombre de la instancia es suficiente para poder identificar el servidor de manera efectiva. Pero en caso de tener muchos servidores se podrían agrupar con diferentes tags vinculadas.</li>
+<li>En la siguiente opción "Imágenes de aplicaciones y sistemas operativos (Imagen de máquina de Amazon)", Podremos elegir el tipo de Sistema operativo que sera utilizado en nuestra instancia. Tiene un buscador en caso de que el SO de
+    preferencia no este entre los predeterminados. En mi caso elegí Amazon Linux.
+    Este panel también nos brinda mas información acerca del tipo de SO y especificaciones.
+    <img alt="Pasted image 20240826181543.png" src="../Crear%20Instancias/8f0ca109e3e1443fa6ed41a97b55f91b434c37d7.png" title="wikilink" /></li>
+<li>En la siguiente opción tenemos "Tipo de Instancia", para la version gratuita de AWS solo la t2.micro esta disponible, básicamente tiene 1 Core de CPU, 1GB de Memoria y nos da la información de el estimado del gasto por hora. Pero en caso de tener la version completa de AWS se podría elegir un sistema con mejores especificaciones.
+    <img alt="Pasted image 20240826181946.png" src="../Crear%20Instancias/374339c9214434aeff8a1f405bfb81f47a56f6d5.png" title="wikilink" /></li>
+<li>En "Par de claves (inicio de sesion)" podremos crear o utilizar un par de claves ya existente para acceder remotamente a la instancia.<img alt="Pasted image 20240826182254.png" src="../Crear%20Instancias/57cb8c79dce4d0eb3b644bf19832b815882dc765.png" title="wikilink" /><ol>
+<li>En nuestro caso clickeamos en "Crear un nuevo par de claves"</li>
+<li>Nos generara el siguiente panel:</li>
+<li>Aqui elegimos un nombre descriptivo para el par, en mi caso "llaves-deploy"</li>
+<li>"RSA" como tipo de algoritmo para la creacion de las keys.</li>
+<li>Y en mi caso .ppk ya que utilizo putty para ingresar remotamente al servidor.</li>
+<li>Por ultimo cliqueamos en "Crear Par de Claves"</li>
+<li>Nos generara un archivo descargable(clave privada-private key) que guardaremos en algun directorio seguro para utilizar luego al momento de conectarnos<img alt="Pasted image 20240826182610.png" src="../Crear%20Instancias/3d43398cadb1377d0e71b0f3fe3d84af17561d36.png" title="wikilink" /><img alt="Pasted image 20240826182722.png" src="../Crear%20Instancias/c3593bafda14d76cc6a24cfcd0d944514f541f7b.png" title="wikilink" /></li>
+</ol>
+</li>
+<li>La siguiente opcion refiere a la configuracion de red, en principio creamos un grupo nuevo con todo chequeado, luego haremos la configuracion detallada de las reglas de entrada/salida una vez la instancia se haya creado. Esto es una suerte de reglas de firewall que podremos configurar.<img alt="Pasted image 20240826183016.png" src="../Crear%20Instancias/d4daaf74b5924e9783f54b68a2ab2325890055b2.png" title="wikilink" /></li>
+<li>El siguiente panel refiere al "Almacenamiento"
+    <img alt="Pasted image 20240826183722.png" src="../Crear%20Instancias/7f5032a57b8f6503b2147e747b24d7a84e3c25aa.png" title="wikilink" /><ol>
+<li>Aquí podremos elegir el tipo de disco duro, la capacidad, la velocidad de escritura, si queremos cifrarlo/encriptarlo y si queremos eliminarlo al eliminar la instancia o no(esto es util en caso de querer migrar el disco duro a otra instancia).</li>
+<li>En nuestro caso dejamos todo por default, es un SSD de 20GB sin encriptar(por defecto 8GB).</li>
+<li>Tambien podemos agregar otro volumen en caso de querer otro disco.</li>
+</ol>
+</li>
+<li>Por ultimo tenemos "Detalles Avanzados", nosotros dejaremos todo en default, ya que ninguna de las opciones entra en el scope de nuestras necesidades.</li>
+<li>Por ultimo verificamos en el panel de "Resumen" que todo sea como lo deseamos y cliqueamos en "Lanzar Instancia".<img alt="Pasted image 20240826183928.png" src="../Crear%20Instancias/0789c5bd11a8b68f7e2d4652905513d01e87eabb.png" title="wikilink" /></li>
+<li>Esto tomara unos segundos pero al finalizar deberíamos poder ver un recuadro verde con un aviso de que se inicio correctamente.<img alt="Pasted image 20240826184049.png" src="../Crear%20Instancias/a50b054b96c14fbec78ffe899566d9071bc7d1f0.png" title="wikilink" /></li>
+<li>Podremos hacer una verificación adicional en el panel de instancias, cliqueando en "Ver todas las Instancias":<img alt="Pasted image 20240826184141.png" src="../Crear%20Instancias/d379cc5cc7ca52369a42b06c84fb722311769800.png" title="wikilink" /></li>
+<li>Como se puede observar, tenemos 4 instancias y la ultima es la que acabamos de crear, la cual esta en estado "Inicializando" esto puede tomar unos minutos ya que se esta configurando la Instancia.</li>
+<li>Para las siguientes configuraciones del manual estaremos utilizando las otras tres instancias que en nuestro caso refieren al proyecto en Node.js el "Backend", el proyecto React el "Frontend" y a la Base de datos en postgres.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1669,6 +1836,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../00-Introduccion/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Manual de Deploy">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Manual de Deploy
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../02-Configurar-Security-Rules/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 02 Configurar Security Rules">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                02 Configurar Security Rules
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1693,10 +1898,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.top", "navigation.footer", "content.code.copy"], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

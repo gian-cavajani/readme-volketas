@@ -13,21 +13,25 @@
       
       
       
+        <link rel="prev" href="../06-Configuracion-inicial-del-servidor/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../08-Deploy-Build-React/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>Documentacion Volquetas</title>
+        <title>07 Configurar NGINX - Documentacion Volquetas</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -83,7 +87,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="/." title="Documentacion Volquetas" class="md-header__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
+    <a href="../.." title="Documentacion Volquetas" class="md-header__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -103,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              07 Configurar NGINX
             
           </span>
         </div>
@@ -204,7 +208,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Documentacion Volquetas" class="md-nav__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
+    <a href="../.." title="Documentacion Volquetas" class="md-nav__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -222,7 +226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -239,17 +243,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -263,7 +269,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Manual De Deploy
@@ -277,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/00-Introduccion/" class="md-nav__link">
+      <a href="../00-Introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -298,7 +304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/01-Crear-Instancias/" class="md-nav__link">
+      <a href="../01-Crear-Instancias/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -319,7 +325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/02-Configurar-Security-Rules/" class="md-nav__link">
+      <a href="../02-Configurar-Security-Rules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -340,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/03-Configurar-IPs-Elasticas/" class="md-nav__link">
+      <a href="../03-Configurar-IPs-Elasticas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -361,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/04-Configurar-Putty/" class="md-nav__link">
+      <a href="../04-Configurar-Putty/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/05-Comprar-y-Configurar-Dominios/" class="md-nav__link">
+      <a href="../05-Comprar-y-Configurar-Dominios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -403,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/06-Configuracion-inicial-del-servidor/" class="md-nav__link">
+      <a href="../06-Configuracion-inicial-del-servidor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -421,10 +427,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/07-Configurar-NGINX/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -433,6 +446,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -445,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/08-Deploy-Build-React/" class="md-nav__link">
+      <a href="../08-Deploy-Build-React/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -466,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/09-Configurar-Instancia-de-Base-de-datos/" class="md-nav__link">
+      <a href="../09-Configurar-Instancia-de-Base-de-datos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/10-Deploy-Backend/" class="md-nav__link">
+      <a href="../10-Deploy-Backend/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/11-Configurar-Certificados/" class="md-nav__link">
+      <a href="../11-Configurar-Certificados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -564,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/old/documentacion-backend-metodos/" class="md-nav__link">
+      <a href="../old/documentacion-backend-metodos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Manual-De-Deploy/old/documentacion-backend-modelos/" class="md-nav__link">
+      <a href="../old/documentacion-backend-modelos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -656,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/cajas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/cajas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -677,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/camiones/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/camiones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -698,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/config/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -719,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/contacto-empresas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/contacto-empresas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/doc2/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/doc2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/empleados/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/empleados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -782,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/empresas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/empresas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -803,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/errores-genericos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/errores-genericos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -824,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/facturas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/facturas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -845,7 +859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/historico-uso-camion/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/historico-uso-camion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -866,7 +880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/jornales/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/jornales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -887,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/movimientos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/movimientos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -908,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/obra-detalles/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/obra-detalles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -929,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/obras/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/obras/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -950,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/pago-pedidos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/pago-pedidos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/particulares/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/particulares/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/pedidos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/pedidos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1013,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/permisos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/permisos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1034,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/servicios/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/servicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1055,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/sugerencias/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/sugerencias/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1076,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/telefonos/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/telefonos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/usuarios/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/usuarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1118,7 +1132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Metodos-HTTP/volquetas/" class="md-nav__link">
+      <a href="../../Metodos-HTTP/volquetas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/cajas/" class="md-nav__link">
+      <a href="../../Modelos/cajas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/camiones/" class="md-nav__link">
+      <a href="../../Modelos/camiones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/config/" class="md-nav__link">
+      <a href="../../Modelos/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1244,7 +1258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/contacto-empresas/" class="md-nav__link">
+      <a href="../../Modelos/contacto-empresas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/empleados/" class="md-nav__link">
+      <a href="../../Modelos/empleados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1286,7 +1300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/empresas/" class="md-nav__link">
+      <a href="../../Modelos/empresas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1307,7 +1321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/facturas/" class="md-nav__link">
+      <a href="../../Modelos/facturas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1328,7 +1342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/historico-uso-camion/" class="md-nav__link">
+      <a href="../../Modelos/historico-uso-camion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1349,7 +1363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/jornales/" class="md-nav__link">
+      <a href="../../Modelos/jornales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1370,7 +1384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/movimientos/" class="md-nav__link">
+      <a href="../../Modelos/movimientos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1391,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/obra-detalles/" class="md-nav__link">
+      <a href="../../Modelos/obra-detalles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1412,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/obras/" class="md-nav__link">
+      <a href="../../Modelos/obras/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/pago-pedidos/" class="md-nav__link">
+      <a href="../../Modelos/pago-pedidos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1454,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/particulares/" class="md-nav__link">
+      <a href="../../Modelos/particulares/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1475,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/pedidos/" class="md-nav__link">
+      <a href="../../Modelos/pedidos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1496,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/permisos/" class="md-nav__link">
+      <a href="../../Modelos/permisos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1517,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/servicios/" class="md-nav__link">
+      <a href="../../Modelos/servicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1538,7 +1552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/sugerencias/" class="md-nav__link">
+      <a href="../../Modelos/sugerencias/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1559,7 +1573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/telefonos/" class="md-nav__link">
+      <a href="../../Modelos/telefonos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1580,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/usuarios/" class="md-nav__link">
+      <a href="../../Modelos/usuarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1601,7 +1615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Modelos/volquetas/" class="md-nav__link">
+      <a href="../../Modelos/volquetas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1650,8 +1664,105 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  <h1>07 Configurar NGINX</h1>
+
+<p>Nginx es un web server que provee un monton de funcionalidades como logs de acceso, proxy reverso, manejo de certificados y sus configuraciones, etc. Nosotros lo usaremos para que el archivo estatico de HTML junto con los archivos js generados en el build queden siempre disponibles, ademas para configurar un dominio y sus certificados.</p>
+<ol>
+<li>Primero debemos instalar nginx en el servidor:</li>
+</ol>
+<!-- -->
+
+<pre><code>sudo yum install -y nginx
+</code></pre>
+<ol>
+<li>El siguiente paso es crear un directorio para alojar el build un estandar para los sitios de frontend es usar /var/www/html/nombre-sitio/build. Por tanto</li>
+</ol>
+<!-- -->
+
+<pre><code>   mkdir /var/www/html/volquetas-react/
+</code></pre>
+<ol>
+<li>Ahora debemos decirle a nginx que archivos debe mirar para hostear en los diferentes puertos. Para ello vamos a crear una nueva configuracion en <code>/etc/nginx/conf.d/react.conf</code></li>
+<li>
+<p>Para nuestra instancia frontend deberia configurarse asi:</p>
+<ol>
+<li>listen 80 -&gt; es el puerto de escucha, vamos a estar usando HTTP porque aun no tenemos el certificado.</li>
+<li>server_name -&gt; es el dominio que previamente compramos y configuramos para apuntar a esta IP, en mi caso volquetas.site</li>
+<li>root -&gt; es el directorio donde nuestro archivo html se encuentra, en nuestro caso /var/www/html/volquetas-react/build</li>
+</ol>
+<!-- -->
+<pre><code>server {
+     listen 80 ;
+     listen [::]:80 ;
+     server_name volquetas.site ;
+     root /var/www/html/volquetas-react/build ;
+     index index.html index.htm ;
+     location / {
+             try_files $uri $uri/ =404 ;
+     }
+}
+</code></pre>
+</li>
+<li>
+<p>Para la instancia Backend la configuracion varia un poco ya que no se utiliza un archivo, si no que vamos a hacer un proxy_pass o proxy inverso desde el puerto 3000 hacia el 80, se deberia ver asi:</p>
+<ol>
+<li>Explicare solo aquellas configuraciones distintas a la configuracion de react para no repetir.</li>
+<li>En location configuraremos: proxy_pass que es desde que puerto esta funcionando la app node y al cual se rutearan las requeste que vengan por el puerto 80.</li>
+<li>proxy_http_version 1.1; -&gt; es la version de HTTP, la 1.1 asegura compatibilidad.</li>
+<li>proxy_set_header Upgrade \$http_upgrade; -&gt; Ajusta el header Upgrade con lo enviado por el cliente, es para manejar las conexiones websocket.</li>
+<li>proxy_set_header Connection 'upgrade'; -&gt; parecida a la configuracion anterior es para mantener la conexion abierta para permitir actualizaciones de protocolo como por ejemplo con websocket.</li>
+<li>proxy_set_header Host \$host; -&gt; esto asegura que el backend pueda manejar las solicitudes segun el host y que setee el host del cliente a el header Host</li>
+<li>proxy_cache_bypass \$http_upgrade; -&gt; Esta directiva asegura que las solicitudes que contienen la cabecera Upgrade no usen la caché. Esto es importante para asegurar que las conexiones WebSocket no se vean afectadas por el almacenamiento en caché.</li>
+</ol>
+<!-- -->
+<pre><code>server {
+ server_name api.volquetas.site;
+
+ location / {
+     proxy_pass http://localhost:3000;
+     proxy_http_version 1.1;
+     proxy_set_header Upgrade $http_upgrade;
+     proxy_set_header Connection 'upgrade';
+     proxy_set_header Host $host;
+     proxy_cache_bypass $http_upgrade;
+ }
+ listen 80;
+ server_name api.volquetas.site;
+}
+</code></pre>
+</li>
+<li>
+<p>Ahora si vemos en cualquiera de las dos instancias en el archivo /etc/nginx/nginx.conf, podremos observar que la configuracion esta siendo referenciada a este directorio:
+    <img alt="Pasted image 20240827103658.png" src="../Configurar%20NGINX/8dca240e82d251d6aaebe0aeb6d778b751dc3cb1.png" /></p>
+</li>
+<li>Para habilitar la configuración y recargar nginx ejecutamos el siguiente comando:</li>
+</ol>
+<!-- -->
+
+<pre><code>   sudo nginx -t &amp;&amp; sudo systemctl reload nginx
+</code></pre>
+<ol>
+<li>Por ultimo para que nginx inicie automaticamente al iniciar el servidor debemos hacer el siguiente comando:</li>
+</ol>
+<pre><code>    sudo systemctl enable nginx
+</code></pre>
+<p>. Estos archivos (react.conf y node.conf) se actualizaran automaticamente un vez se instale el certificado, lo cual haremos en la seccion de: <a href="../11-Configurar-Certificados/">Configurar Certificados</a>. Esto con el fin de poder manejar solicitudes HTTPs, porque hasta el momento solo se podran hacer request via HTTP lo cual es inseguro y no recomendado. 10. Ahora Nginx quedo pronto para alojar nuestro sitio, el siguiente paso es crear el build y moverlo a la carpeta designada. Lo haremos en <a href="../08-Deploy-Build-React/">Deploy Build React</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1669,6 +1780,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../06-Configuracion-inicial-del-servidor/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 06 Configuracion inicial del servidor">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                06 Configuracion inicial del servidor
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../08-Deploy-Build-React/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 08 Deploy Build React">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                08 Deploy Build React
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1693,10 +1842,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.top", "navigation.footer", "content.code.copy"], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
