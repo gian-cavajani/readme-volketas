@@ -9,8 +9,7 @@ Esta sección incluye enlaces a las 22 subsecciones relacionadas con los modelos
 3.  [Cajas](operativa-interna/cajas.md)
 4.  [Jornales](operativa-interna/jornales.md)
 5.  [Volquetas](operativa-interna/volquetas.md)
-6.  [Estadísticas](operativa-interna/estadisticas.md)
-7.  [Configuración del Sistema](operativa-interna/config.md)
+6.  [Configuración del Sistema](operativa-interna/config.md)
 
 ### Gestión de Clientes:
 
