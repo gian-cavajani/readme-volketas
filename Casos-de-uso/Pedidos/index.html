@@ -1,0 +1,2972 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentacion para proyecto de volquetas">
+      
+      
+        <meta name="author" content="Gianluca Cavajani">
+      
+      
+      
+        <link rel="prev" href="../Particular/">
+      
+      
+        <link rel="next" href="../Sugerencias/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>Pedidos - Documentacion Volquetas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cu01-crear-nuevo-pedido" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Documentacion Volquetas" class="md-header__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentacion Volquetas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pedidos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentacion Volquetas" class="md-nav__button md-logo" aria-label="Documentacion Volquetas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Documentacion Volquetas
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyecto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Casos de uso
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Casos de uso
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cajas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cajas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cambiar%20Contrase%C3%B1a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cambiar Contraseña
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Camiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Camiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Empleados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empleados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Empresa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empresa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Facturas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Facturas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Historial%20Camiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Historial Camiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion a los Casos de Uso
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Jornales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jornales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lista%20de%20Pedidos%20que%20cumplen%20las%2048hs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lista de Pedidos que cumplen las 48hs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login%2C%20Logout%2C%20Singin%2C%20Confirmar%20Usuario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Login, Logout, Singin, Confirmar Usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Movimientos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Movimientos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Particular/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Particular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pedidos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Pedidos
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cu01-crear-nuevo-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      CU01 - Crear Nuevo Pedido
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cu02-modificar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      CU02 - Modificar Pedido
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CU02 - Modificar Pedido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cu03-visualizar-lista-de-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      CU03 Visualizar Lista de Pedidos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sugerencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sugerencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Volquetas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volquetas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Manual De Deploy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Manual De Deploy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual-De-Deploy/00-Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manual de Deploy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual-De-Deploy/01-Crear-Instancias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01 Crear Instancias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual-De-Deploy/02-Configurar-Security-Rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02 Configurar Security Rules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual-De-Deploy/03-Configurar-IPs-Elasticas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03 Configurar IPs Elasticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual-De-Deploy/04-Configurar-Putty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04 Configurar Putty
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual-De-Deploy/05-Comprar-y-Configurar-Dominios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 Comprar y Configurar Dominios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual-De-Deploy/06-Configuracion-inicial-del-servidor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 Configuracion inicial del servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual-De-Deploy/07-Configurar-NGINX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07 Configurar NGINX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual-De-Deploy/08-Deploy-Build-React/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08 Deploy Build React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual-De-Deploy/09-Configurar-Instancia-de-Base-de-datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09 Configurar Instancia de Base de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual-De-Deploy/10-Deploy-Backend/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 Deploy Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manual-De-Deploy/11-Configurar-Certificados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 Configurar Certificados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Metodos HTTP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Metodos HTTP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/errores-genericos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errores genericos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Camiones
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Camiones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/camiones/camiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Camiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/camiones/historico-uso-camion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Historico uso camion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/camiones/servicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Clientes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Clientes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/clientes/contacto-empresas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contacto empresas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/clientes/empresas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empresas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/clientes/obras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obras
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/clientes/particulares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Particulares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/clientes/permisos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Permisos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/clientes/telefonos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Telefonos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Operativa interna
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Operativa interna
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/operativa-interna/cajas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cajas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/operativa-interna/config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/operativa-interna/empleados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empleados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/operativa-interna/estadisticas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estadisticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/operativa-interna/jornales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jornales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/operativa-interna/usuarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usuarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/operativa-interna/volquetas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volquetas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pedidos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Pedidos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/pedidos/facturas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Facturas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/pedidos/movimientos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Movimientos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/pedidos/pago-pedidos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pago pedidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/pedidos/pedidos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pedidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Metodos-HTTP/pedidos/sugerencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sugerencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modelos Tablas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Modelos Tablas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/Introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Camiones
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Camiones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/camiones/camiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Camiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/camiones/historico-uso-camion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: HistoricoUsoCamion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/camiones/servicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Servicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Clientes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Clientes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/clientes/contacto-empresas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: ContactoEmpresas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/clientes/empresas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Empresas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/clientes/obra-detalles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: ObraDetalles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/clientes/obras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Obras
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/clientes/particulares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Particulares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/clientes/permisos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Permisos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/clientes/telefonos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Telefonos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Operativa interna
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Operativa interna
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/operativa-interna/cajas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Cajas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/operativa-interna/config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Config
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/operativa-interna/empleados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Empleados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/operativa-interna/jornales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Jornales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/operativa-interna/usuarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Usuarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/operativa-interna/volquetas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Volquetas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pedidos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Pedidos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/pedidos/facturas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Facturas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/pedidos/movimientos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Movimientos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/pedidos/pago-pedidos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: PagoPedidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/pedidos/pedidos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Pedidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modelos-Tablas/pedidos/sugerencias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo: Sugerencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cu01-crear-nuevo-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      CU01 - Crear Nuevo Pedido
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cu02-modificar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      CU02 - Modificar Pedido
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CU02 - Modificar Pedido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cu03-visualizar-lista-de-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      CU03 Visualizar Lista de Pedidos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Pedidos</h1>
+
+<h3 id="cu01-crear-nuevo-pedido">CU01 - Crear Nuevo Pedido<a class="headerlink" href="#cu01-crear-nuevo-pedido" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Código</strong></th>
+<th><strong>Título</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Actor</strong></th>
+<th><strong>Precondición</strong></th>
+<th><strong>Postcondición</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CU01</td>
+<td>Crear Nuevo Pedido</td>
+<td>El usuario puede crear un nuevo pedido seleccionando un cliente (empresa o particular), una obra asociada, un tipo de pedido, y otros detalles opcionales.</td>
+<td>Usuario</td>
+<td>1. Usuario autenticado.  <br>2. Usuario con permisos para crear pedidos.  <br>3. Debe existir al menos una empresa o particular registrado, o el usuario puede agregar uno nuevo.</td>
+<td>El pedido se crea correctamente en el sistema y el usuario es redirigido a la vista de detalles del pedido creado.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Flujo Alternativo</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CU01-A1</td>
+<td>El cliente no está registrado:  <br>1. El usuario selecciona "Nuevo" en el estado del cliente y elige si es "Empresa" o "Particular".  <br>2. El sistema muestra un formulario para agregar un nuevo cliente.  <br>3. El usuario completa el formulario y agrega el cliente.</td>
+</tr>
+<tr>
+<td>CU01-A2</td>
+<td>El cliente está registrado:  <br>1. El usuario selecciona "Registrado" en el estado del cliente y elige si es "Empresa" o "Particular".  <br>2. El sistema permite seleccionar un cliente existente.</td>
+</tr>
+<tr>
+<td>CU01-A3</td>
+<td>El cliente tiene múltiples obras:  <br>1. El sistema muestra una lista de obras asociadas al cliente.  <br>2. El usuario selecciona la obra deseada.  <br>3. Si la obra no existe, el usuario puede agregar una nueva obra.</td>
+</tr>
+<tr>
+<td>CU01-A4</td>
+<td>Error al crear el pedido:  <br>1. Si ocurre un error al intentar crear el pedido, el sistema muestra un mensaje de error.  <br>2. El usuario puede corregir los datos ingresados y volver a intentar.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Flujo Principal</strong></th>
+<th><strong>Acción del Usuario</strong></th>
+<th><strong>Respuesta del Sistema</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CU01-A1</td>
+<td>El usuario accede a la pantalla para crear un nuevo pedido.</td>
+<td>El sistema muestra el formulario para crear un nuevo pedido, permitiendo seleccionar el tipo de cliente (empresa o particular) y el estado del cliente (nuevo o registrado).</td>
+</tr>
+<tr>
+<td>CU01-A2</td>
+<td>El usuario selecciona el estado del cliente (nuevo o registrado) y el tipo de cliente (empresa o particular).</td>
+<td>El sistema actualiza el formulario según la selección, permitiendo al usuario buscar un cliente existente o registrar un nuevo cliente.</td>
+</tr>
+<tr>
+<td>CU01-A3</td>
+<td>Si el cliente es nuevo:  <br>- El usuario completa el formulario de creación de cliente.  <br>- El usuario selecciona el cliente recién creado.</td>
+<td>El sistema guarda la información del nuevo cliente y permite al usuario seleccionarlo para el pedido.</td>
+</tr>
+<tr>
+<td>CU01-A4</td>
+<td>El usuario selecciona la obra asociada al cliente.</td>
+<td>El sistema muestra una lista de obras disponibles para el cliente seleccionado.</td>
+</tr>
+<tr>
+<td>CU01-A5</td>
+<td>El usuario selecciona un permiso, si aplica, y completa los demás campos del formulario (descripción, número de pesada, chofer, horario sugerido, etc.).</td>
+<td>El sistema permite al usuario ingresar y seleccionar toda la información necesaria para el pedido.</td>
+</tr>
+<tr>
+<td>CU01-A6</td>
+<td>El usuario selecciona el tipo de pedido (simple, múltiple, entrega/levante) y especifica la cantidad si es un pedido múltiple.</td>
+<td>El sistema ajusta el formulario según el tipo de pedido seleccionado, permitiendo al usuario especificar detalles adicionales si es necesario.</td>
+</tr>
+<tr>
+<td>CU01-A7</td>
+<td>El usuario selecciona el tipo de pago y el precio, y marca si el pedido está pagado o no.</td>
+<td>El sistema permite al usuario ingresar esta información.</td>
+</tr>
+<tr>
+<td>CU01-A8</td>
+<td>El usuario revisa toda la información ingresada y hace clic en "Crear Pedido".</td>
+<td>El sistema valida los datos ingresados y crea el pedido en el sistema, mostrando un mensaje de éxito y redirigiendo al usuario a la página de detalles del pedido.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cu02-modificar-pedido">CU02 - Modificar Pedido<a class="headerlink" href="#cu02-modificar-pedido" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Código</strong></th>
+<th><strong>Título</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Actor</strong></th>
+<th><strong>Precondición</strong></th>
+<th><strong>Postcondición</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CU01</td>
+<td>Modificar Pedido</td>
+<td>El usuario puede modificar los detalles de un pedido existente, incluyendo descripción, permiso, número de pesada y obra asociada.</td>
+<td>Usuario</td>
+<td>1. Usuario autenticado.  <br>2. Usuario con permisos para modificar pedidos.  <br>3. Pedido existente.</td>
+<td>El pedido se modifica correctamente en el sistema y se actualiza la información correspondiente.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Paso</strong></th>
+<th><strong>Acción del Usuario</strong></th>
+<th><strong>Respuesta del Sistema</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El usuario abre la interfaz de modificación para un pedido específico.</td>
+<td>El sistema muestra el formulario con los detalles actuales del pedido.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El usuario edita la descripción, el número de pesada, selecciona una nueva obra, y/o un nuevo permiso.</td>
+<td>El sistema permite al usuario editar los campos.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Si se selecciona "Crear Nuevo Permiso":  <br>- El usuario ingresa los detalles del nuevo permiso.</td>
+<td>El sistema permite al usuario ingresar los datos del nuevo permiso (fecha de creación, fecha de vencimiento, y número de permiso).</td>
+</tr>
+<tr>
+<td>4</td>
+<td>El usuario guarda los cambios.</td>
+<td>El sistema valida los datos ingresados.</td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td>El sistema actualiza la información del pedido con los nuevos datos y muestra un mensaje de éxito.</td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td>El sistema cierra la interfaz de modificación.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Código</strong></th>
+<th><strong>Título</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CU01-A1</td>
+<td>Error al obtener las obras del cliente</td>
+<td>Si ocurre un error al obtener las obras del cliente, el sistema muestra un mensaje de error.</td>
+</tr>
+<tr>
+<td>CU01-A2</td>
+<td>Error al obtener los permisos de la empresa</td>
+<td>Si ocurre un error al obtener los permisos de la empresa, el sistema muestra un mensaje de error.</td>
+</tr>
+<tr>
+<td>CU01-A3</td>
+<td>Descripción excede los 255 caracteres</td>
+<td>Si la descripción excede los 255 caracteres, el sistema muestra un mensaje de error y el usuario debe corregirla.</td>
+</tr>
+<tr>
+<td>CU01-A4</td>
+<td>Error al modificar el pedido</td>
+<td>Si ocurre un error al modificar el pedido, el sistema muestra un mensaje de error y permite al usuario volver a intentar.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cu03-visualizar-lista-de-pedidos">CU03 Visualizar Lista de Pedidos<a class="headerlink" href="#cu03-visualizar-lista-de-pedidos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Código</strong></th>
+<th><strong>Título</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Actor</strong></th>
+<th><strong>Precondición</strong></th>
+<th><strong>Postcondición</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CU03</td>
+<td>Visualizar Lista de Pedidos</td>
+<td>El usuario puede visualizar una lista de todos los pedidos registrados en el sistema.</td>
+<td>Usuario</td>
+<td>Usuario autenticado con permisos para ver pedidos.</td>
+<td>Se muestra una lista de pedidos según los filtros aplicados.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Flujo de trabajo</strong></th>
+<th><strong>Acción del Usuario</strong></th>
+<th><strong>Respuesta del Sistema</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El usuario navega a la sección de "Pedidos".</td>
+<td>El sistema carga y muestra una lista de todos los pedidos registrados en el sistema.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El usuario observa la lista de pedidos.</td>
+<td>La lista muestra información básica de cada pedido, como fecha, cliente, dirección, precio, estado de pago, sugerencias y últimos movimientos.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>El usuario puede desplazarse por la lista para ver más pedidos.</td>
+<td>El sistema permite desplazarse por la lista completa si hay más pedidos de los que caben en la pantalla visible.</td>
+</tr>
+<tr>
+<td>#### CU04: Filtrar Pedidos por Cliente</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Código</strong></th>
+<th><strong>Título</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Actor</strong></th>
+<th><strong>Precondición</strong></th>
+<th><strong>Postcondición</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CU04</td>
+<td>Filtrar Pedidos por Cliente</td>
+<td>El usuario puede filtrar los pedidos según el tipo de cliente (empresa o particular).</td>
+<td>Usuario</td>
+<td>Usuario autenticado con permisos para ver pedidos.</td>
+<td>Se muestra una lista de pedidos filtrada según el tipo de cliente seleccionado.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Flujo de trabajo</th>
+<th><strong>Acción del Usuario</strong></th>
+<th><strong>Respuesta del Sistema</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El usuario selecciona un filtro para el tipo de cliente (empresa o particular).</td>
+<td>El sistema filtra la lista de pedidos y muestra solo aquellos que corresponden al tipo de cliente seleccionado (empresa o particular).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El usuario observa la lista filtrada de pedidos.</td>
+<td>La lista muestra solo los pedidos que cumplen con el criterio de filtro seleccionado.</td>
+</tr>
+<tr>
+<td>#### CU05: Filtrar Pedidos por Estado de Pago</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Código</strong></th>
+<th><strong>Título</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Actor</strong></th>
+<th><strong>Precondición</strong></th>
+<th><strong>Postcondición</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CU03</td>
+<td>Filtrar Pedidos por Estado de Pago</td>
+<td>El usuario puede filtrar los pedidos según su estado de pago (pagado o no pagado).</td>
+<td>Usuario</td>
+<td>Usuario autenticado con permisos para ver pedidos.</td>
+<td>Se muestra una lista de pedidos filtrada según el estado de pago seleccionado.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Flujo de trabajo</strong></th>
+<th><strong>Acción del Usuario</strong></th>
+<th><strong>Respuesta del Sistema</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El usuario selecciona un filtro para el estado de pago (pagado o no pagado).</td>
+<td>El sistema filtra la lista de pedidos y muestra solo aquellos que corresponden al estado de pago seleccionado.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El usuario observa la lista filtrada de pedidos.</td>
+<td>La lista muestra solo los pedidos que cumplen con el criterio de filtro seleccionado.</td>
+</tr>
+<tr>
+<td>#### CU06: Filtrar Pedidos por Movimiento</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Código</strong></th>
+<th><strong>Título</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Actor</strong></th>
+<th><strong>Precondición</strong></th>
+<th><strong>Postcondición</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CU04</td>
+<td>Filtrar Pedidos por Movimiento</td>
+<td>El usuario puede filtrar los pedidos según su último movimiento (sin entregar, entregado, levantado).</td>
+<td>Usuario</td>
+<td>Usuario autenticado con permisos para ver pedidos.</td>
+<td>Se muestra una lista de pedidos filtrada según el último movimiento seleccionado.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Flujo de trabajo</strong></th>
+<th><strong>Acción del Usuario</strong></th>
+<th><strong>Respuesta del Sistema</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El usuario selecciona un filtro para el tipo de movimiento (sin entregar, entregado, levantado).</td>
+<td>El sistema filtra la lista de pedidos y muestra solo aquellos que corresponden al tipo de movimiento seleccionado.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El usuario observa la lista filtrada de pedidos.</td>
+<td>La lista muestra solo los pedidos que cumplen con el criterio de filtro seleccionado.</td>
+</tr>
+<tr>
+<td>#### CU07: Ver Detalle de Pedido</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Código</strong></th>
+<th><strong>Título</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Actor</strong></th>
+<th><strong>Precondición</strong></th>
+<th><strong>Postcondición</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CU05</td>
+<td>Ver Detalle de Pedido</td>
+<td>El usuario puede ver el detalle de un pedido específico al hacer clic en su fila correspondiente en la lista.</td>
+<td>Usuario</td>
+<td>Usuario autenticado con permisos para ver pedidos.</td>
+<td>Se muestra el detalle completo del pedido seleccionado.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Flujo de trabajo</strong></th>
+<th><strong>Acción del Usuario</strong></th>
+<th><strong>Respuesta del Sistema</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>El usuario hace clic en un pedido específico en la lista de pedidos.</td>
+<td>El sistema navega a la pantalla de detalles del pedido seleccionado, mostrando información detallada sobre ese pedido.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El usuario revisa la información detallada del pedido.</td>
+<td>El sistema muestra información completa del pedido, incluyendo cliente, obra, descripción, permisos, movimientos, etc.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../Particular/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Particular">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Particular
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Sugerencias/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Sugerencias">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Sugerencias
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>
