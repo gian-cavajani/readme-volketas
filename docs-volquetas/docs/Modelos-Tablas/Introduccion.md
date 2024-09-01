@@ -1,5 +1,9 @@
 Esta sección incluye enlaces a las 22 subsecciones relacionadas con los modelos:
 
+## Diagrama de tablas:
+
+![volk_modificada.png](../imagenes/volk_modificada.png 'wikilink')
+
 ## Modelos/Tablas:
 
 ### Gestión de la Operativa Interna:

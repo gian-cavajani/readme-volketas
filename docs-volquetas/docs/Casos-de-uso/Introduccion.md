@@ -1,0 +1,1 @@
+Esta sección presenta una serie de escenarios que describen las interacciones entre los usuarios y el sistema, detallando los pasos necesarios para realizar operaciones clave como la gestión de pedidos, empleados, clientes, permisos, volquetas y más.
